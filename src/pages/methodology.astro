@@ -1,0 +1,298 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const phases = [
+  {
+    letter: "C",
+    name: "Converge",
+    summary: "Align stakeholders around a shared understanding of agentic AI opportunity and organizational reality.",
+    detail: "Every failed AI initiative traces back to misalignment that existed before the first line of code. We invest in alignment before investing in technology.",
+    output: "Agentic Readiness Score and prioritized opportunity set."
+  },
+  {
+    letter: "A",
+    name: "Architect",
+    summary: "Design the technical, organizational, and governance architecture for the target agentic operating model.",
+    detail: "Agentic systems create emergent complexity — without deliberate architectural choices, organizations end up with ungovernable agent sprawl.",
+    output: "Integrated architecture blueprint spanning technology, governance, and organization."
+  },
+  {
+    letter: "T",
+    name: "Transform",
+    summary: "Execute the foundational changes required before agentic systems can operate — data, infrastructure, skills, and culture.",
+    detail: "Most organizations cannot drop agentic AI onto their current foundation. We sequence the prerequisite work explicitly.",
+    output: "Organization prepared to support agentic operations."
+  },
+  {
+    letter: "A",
+    name: "Accelerate",
+    summary: "Deploy agentic systems through controlled pilots that prove value and build confidence.",
+    detail: "Rigorous scoping and measurement paradoxically make pilots faster — teams spend zero time debating whether the pilot succeeded.",
+    output: "Validated agentic systems with measured business impact."
+  },
+  {
+    letter: "L",
+    name: "Learn",
+    summary: "Extract maximum insight from pilot outcomes to inform scaling decisions.",
+    detail: "Every pilot produces surprises. We build a formal learning phase because organizations under execution pressure skip reflection unless it is explicitly scheduled.",
+    output: "Evidence-based assessment of scaling readiness."
+  },
+  {
+    letter: "Y",
+    name: "Yield",
+    summary: "Scale proven systems across the enterprise, realizing returns at increasing magnitude.",
+    detail: "Too many AI programs declare victory at pilot and never reach enterprise value. We maintain executive attention through the scaling phase where the real returns materialize.",
+    output: "Enterprise-scale agentic operations delivering measurable business value."
+  },
+  {
+    letter: "S",
+    name: "Sustain",
+    summary: "Establish the operating model for long-term agentic operations.",
+    detail: "A transformation that requires permanent consulting support is not a transformation — it is outsourcing. We measure success by the client's ability to operate without us.",
+    output: "Self-sustaining agentic operations that improve over time."
+  },
+  {
+    letter: "T",
+    name: "Transcend",
+    summary: "Identify the next frontier of agentic capability.",
+    detail: "The organizations that win will not be those that implement AI once, but those that continuously redefine what AI can do for them. CATALYST is a cycle, not a line.",
+    output: "Next-generation transformation vision that restarts the cycle."
+  }
+];
+
+const maturityLevels = [
+  {
+    level: 1,
+    name: "Exploring",
+    description: "AI is discussed but not deployed. Interest without action. No governance, no architecture, no operational framework.",
+    width: "20%"
+  },
+  {
+    level: 2,
+    name: "Experimenting",
+    description: "One to three pilots in progress. Dedicated team assigned but limited cross-functional engagement. Value demonstrated in controlled settings, not at scale.",
+    width: "40%"
+  },
+  {
+    level: 3,
+    name: "Operationalizing",
+    description: "Multiple agentic systems in production across 2+ business functions. Enterprise architecture governing new deployments. Measurable business value being tracked.",
+    width: "60%"
+  },
+  {
+    level: 4,
+    name: "Scaling",
+    description: "Agentic AI embedded in core business processes. Multi-agent systems operational. Significant, measurable ROI at portfolio level. Competitive advantage emerging.",
+    width: "80%"
+  },
+  {
+    level: 5,
+    name: "Leading",
+    description: "Agentic AI defines the operating model and competitive strategy. New business models enabled. The organization shapes industry standards rather than following them.",
+    width: "100%"
+  }
+];
+
+const dimensions = [
+  { name: "Technical Infrastructure", question: "Can your systems host and operate agentic AI?" },
+  { name: "Data Maturity", question: "Is your data accessible, governed, and agent-ready?" },
+  { name: "Organizational Culture", question: "Will your people embrace AI-driven operations?" },
+  { name: "Workforce Capability", question: "Do you have the skills to build, deploy, and supervise agents?" },
+  { name: "Regulatory Posture", question: "Are you prepared for the compliance landscape governing AI?" },
+  { name: "AI/ML Footprint", question: "What foundation have you already built?" }
+];
+---
+
+<Layout title="CATALYST Methodology" description="CATALYST: Nexus AI Consulting's proprietary methodology for guiding enterprises through agentic AI transformation.">
+
+  <!-- Hero -->
+  <section class="bg-navy text-pure-white py-24 md:py-32 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.04]">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-teal rounded-full"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-teal rounded-full"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] border border-teal rounded-full"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <p class="text-teal-light text-sm font-semibold uppercase tracking-widest mb-4">Proprietary Framework</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl">
+        CATALYST: <span class="text-teal-light">Built for agentic transformation.</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-silver max-w-3xl leading-relaxed">
+        Not adapted from a generic consulting playbook. Not borrowed from the chatbot era. Designed from first principles for the specific dynamics of agentic AI: autonomous decision-making, emergent behavior, human-AI collaboration, and the organizational trust-building required to delegate consequential work to machines.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Eight Phases -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-sm font-semibold text-teal uppercase tracking-widest mb-3">The Framework</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Eight Phases. One Cycle.</h2>
+        <p class="text-slate text-lg">CATALYST is iterative, not linear. Enterprises enter at any phase. Multiple cycles run concurrently across different business units. The real world is not a waterfall.</p>
+      </div>
+
+      <!-- Phase Cycle Visual -->
+      <div class="mb-16 flex justify-center">
+        <div class="flex flex-wrap justify-center gap-1 md:gap-0">
+          {phases.map((phase, i) => (
+            <div class="flex items-center">
+              <div class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-teal text-pure-white flex items-center justify-center font-bold text-lg md:text-xl shadow-md">
+                {phase.letter}
+              </div>
+              {i < phases.length - 1 && (
+                <div class="hidden md:block w-8 h-0.5 bg-teal/30"></div>
+              )}
+            </div>
+          ))}
+          <div class="hidden md:flex items-center">
+            <div class="w-8 h-0.5 bg-teal/30"></div>
+            <svg class="w-5 h-5 text-teal/50 -ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l-7 7 7 7"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phase Cards -->
+      <div class="space-y-4">
+        {phases.map((phase, i) => (
+          <details class="group bg-pure-white border border-silver-light rounded-xl overflow-hidden hover:border-teal/30 transition-colors">
+            <summary class="flex items-center gap-4 md:gap-6 p-6 cursor-pointer select-none">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-navy text-teal-light flex items-center justify-center font-bold text-lg">
+                {i + 1}
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-lg md:text-xl font-bold text-navy">{phase.name}</h3>
+                <p class="text-slate text-sm mt-1 hidden sm:block">{phase.summary}</p>
+              </div>
+              <svg class="w-5 h-5 text-slate flex-shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0">
+              <div class="ml-0 md:ml-[4.5rem] border-t border-silver-light pt-5">
+                <p class="text-slate text-sm sm:hidden mb-4">{phase.summary}</p>
+                <p class="text-slate leading-relaxed mb-4">{phase.detail}</p>
+                <div class="flex items-start gap-2 bg-navy/[0.03] rounded-lg p-4">
+                  <span class="text-teal font-semibold text-sm flex-shrink-0">Key Output:</span>
+                  <span class="text-navy text-sm font-medium">{phase.output}</span>
+                </div>
+              </div>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="py-20 md:py-28 bg-navy text-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <p class="text-teal-light text-sm font-semibold uppercase tracking-widest mb-3">Differentiators</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why CATALYST Is Different</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-navy-light border border-navy-light rounded-xl p-8">
+          <div class="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Built for agentic systems.</h3>
+          <p class="text-silver leading-relaxed text-sm">Not retrofitted from a digital transformation framework. The dynamics of autonomous AI agents — emergent behavior, trust calibration, human-AI collaboration — require purpose-built methodology.</p>
+        </div>
+
+        <div class="bg-navy-light border border-navy-light rounded-xl p-8">
+          <div class="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Iterative, not linear.</h3>
+          <p class="text-silver leading-relaxed text-sm">Enterprises enter at any phase. Multiple cycles run concurrently across different business units. The real world is not a waterfall.</p>
+        </div>
+
+        <div class="bg-navy-light border border-navy-light rounded-xl p-8">
+          <div class="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Tested on ourselves.</h3>
+          <p class="text-silver leading-relaxed text-sm">We built Nexus using CATALYST. Our own firm is the first case study. Every phase has been validated in a live organization with Fortune 500-grade quality requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maturity Model -->
+  <section class="py-20 md:py-28 bg-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mb-16">
+        <p class="text-sm font-semibold text-teal uppercase tracking-widest mb-3">Maturity Model</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Where Do You Stand?</h2>
+        <p class="text-slate text-lg">Five levels of enterprise agentic AI adoption. Most Fortune 500 companies are at Level 1 or 2. Value accelerates at Level 3 and compounds from there.</p>
+      </div>
+
+      <div class="space-y-6">
+        {maturityLevels.map((level) => (
+          <div class="group">
+            <div class="flex items-start gap-4 md:gap-6">
+              <div class="flex-shrink-0 w-12 h-12 rounded-full bg-navy text-teal-light flex items-center justify-center font-bold text-lg">
+                {level.level}
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-3 mb-2">
+                  <h3 class="text-lg font-bold text-navy">{level.name}</h3>
+                  {level.level <= 2 && (
+                    <span class="text-xs font-medium text-slate bg-silver-light px-2 py-0.5 rounded">Most Fortune 500</span>
+                  )}
+                </div>
+                <p class="text-slate text-sm leading-relaxed mb-3">{level.description}</p>
+                <div class="w-full bg-silver-light rounded-full h-2 overflow-hidden">
+                  <div class="h-full rounded-full bg-gradient-to-r from-teal to-teal-light transition-all duration-700" style={`width: ${level.width}`}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Readiness Score -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div>
+          <p class="text-sm font-semibold text-teal uppercase tracking-widest mb-3">Proprietary Diagnostic</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">The Agentic Readiness Score</h2>
+          <p class="text-slate text-lg leading-relaxed mb-6">Our proprietary diagnostic evaluates six dimensions of organizational readiness. The composite score tells you where you are, benchmarks you against peers, and maps directly to which CATALYST phase you should enter.</p>
+          <a href="/contact" class="inline-flex items-center text-teal font-semibold hover:text-teal-dark transition-colors">
+            Get your score
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="space-y-4">
+          {dimensions.map((dim, i) => (
+            <div class="flex items-start gap-4 bg-pure-white border border-silver-light rounded-lg p-4 hover:border-teal/30 transition-colors">
+              <div class="flex-shrink-0 w-8 h-8 rounded-md bg-navy text-teal-light flex items-center justify-center font-bold text-sm">
+                {i + 1}
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-navy">{dim.name}</h4>
+                <p class="text-slate text-sm mt-0.5">{dim.question}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-navy py-20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-pure-white mb-4">Find out where you stand.</h2>
+      <p class="text-silver text-lg mb-8 max-w-2xl mx-auto">The Readiness Assessment quantifies your organization's starting point across all six dimensions — and gives you a prioritized map of where to act first.</p>
+      <a href="/contact" class="inline-flex items-center px-8 py-4 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-light transition-colors text-lg">
+        Book a Readiness Assessment
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+</Layout>

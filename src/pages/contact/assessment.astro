@@ -1,0 +1,190 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const submitted = Astro.url.searchParams.get('submitted') === 'true';
+---
+
+<Layout title="Readiness Assessment" description="Find out where your organization stands on agentic AI. A 6-week diagnostic starting at $75K.">
+
+  <!-- Hero -->
+  <section class="bg-navy text-pure-white py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-teal text-sm font-semibold tracking-widest uppercase mb-4">Readiness Assessment</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight max-w-3xl mx-auto">
+        Find out where you stand. In 6 weeks.
+      </h1>
+      <p class="mt-6 text-lg text-silver max-w-2xl mx-auto">
+        A quantified, actionable diagnostic of your organization's agentic AI readiness — with a prioritized map of where to act first.
+      </p>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="py-20 md:py-28 bg-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-center mb-16">What you get</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl border border-silver-light p-8">
+          <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-5">
+            <span class="text-lg font-bold text-teal">1</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Agentic Readiness Report</h3>
+          <p class="text-slate text-sm leading-relaxed">Quantified scores across six dimensions — technical infrastructure, data maturity, organizational culture, workforce capability, regulatory posture, and AI/ML footprint. Benchmarked against your industry.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-silver-light p-8">
+          <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-5">
+            <span class="text-lg font-bold text-teal">2</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Use Case Heat Map</h3>
+          <p class="text-slate text-sm leading-relaxed">15-25 agentic use cases ranked by business impact, feasibility, and organizational readiness — so you know exactly where to invest first.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-silver-light p-8">
+          <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-5">
+            <span class="text-lg font-bold text-teal">3</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Quick-Win Brief</h3>
+          <p class="text-slate text-sm leading-relaxed">3-5 high-value opportunities achievable within 90 days that demonstrate early value and build organizational momentum.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-silver-light p-8">
+          <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-5">
+            <span class="text-lg font-bold text-teal">4</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Executive Presentation</h3>
+          <p class="text-slate text-sm leading-relaxed">Board-ready findings, recommendations, and proposed next steps — designed to secure alignment and investment approval.</p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-silver-light p-8">
+          <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-5">
+            <span class="text-lg font-bold text-teal">5</span>
+          </div>
+          <h3 class="text-lg font-bold mb-3">Prioritized Roadmap</h3>
+          <p class="text-slate text-sm leading-relaxed">A clear, sequenced path forward — from quick wins to enterprise-scale transformation, with investment requirements and dependencies mapped.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Investment + Social Proof -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Investment</h2>
+        <div class="bg-pure-white rounded-2xl border border-silver-light p-10 md:p-14 mb-12">
+          <p class="text-sm text-teal font-semibold tracking-widest uppercase mb-3">Starting at</p>
+          <p class="text-5xl md:text-6xl font-bold text-navy mb-4">$75K</p>
+          <p class="text-slate leading-relaxed max-w-md mx-auto">
+            Transparent pricing. No hidden fees. Scoped to your organization's size and complexity. You know the total investment before we start.
+          </p>
+        </div>
+
+        <div class="bg-navy rounded-2xl p-10 md:p-14 text-left">
+          <p class="text-teal text-sm font-semibold tracking-widest uppercase mb-4">Our own proof</p>
+          <h3 class="text-2xl font-bold text-pure-white mb-4">We built Nexus in under one week.</h3>
+          <p class="text-silver leading-relaxed">
+            Nine AI agents. Five service lines. A proprietary methodology. Enterprise-grade deliverables. The same timeline would take a traditional firm 6 to 12 months. Our existence is the most compelling evidence that agentic AI delivers measurable, transformative value — fast.
+          </p>
+          <a href="/insights" class="inline-flex items-center gap-2 text-teal font-semibold mt-6 hover:text-teal-light transition-colors">
+            Read the full case study
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Assessment Form -->
+  <section class="py-20 md:py-28 bg-navy" id="book">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-pure-white tracking-tight mb-4">Book your assessment</h2>
+        <p class="text-silver text-lg">Fill out the form below. Tony will be in touch within 24 hours.</p>
+      </div>
+
+      {submitted ? (
+        <div class="bg-teal/10 border border-teal/30 rounded-xl p-10 text-center">
+          <div class="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-pure-white mb-3">Thank you.</h3>
+          <p class="text-silver leading-relaxed max-w-md mx-auto">
+            Your request has been received. Tony will be in touch within 24 hours to schedule a conversation.
+          </p>
+        </div>
+      ) : (
+        <form action="https://formspree.io/f/xpqydeoj" method="POST" class="space-y-6">
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="hidden" name="_subject" value="New Assessment Request (Assessment Page)" />
+
+          <div>
+            <label for="assessment-name" class="block text-sm font-semibold text-silver mb-2">Full Name <span class="text-teal">*</span></label>
+            <input type="text" id="assessment-name" name="name" required autocomplete="name"
+              class="w-full px-5 py-4 bg-navy-light border border-silver/20 rounded-lg text-pure-white text-base placeholder-slate focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow" placeholder="Jane Smith" />
+          </div>
+
+          <div>
+            <label for="assessment-email" class="block text-sm font-semibold text-silver mb-2">Work Email <span class="text-teal">*</span></label>
+            <input type="email" id="assessment-email" name="email" required autocomplete="email"
+              class="w-full px-5 py-4 bg-navy-light border border-silver/20 rounded-lg text-pure-white text-base placeholder-slate focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow" placeholder="jane@company.com" />
+          </div>
+
+          <div>
+            <label for="assessment-company" class="block text-sm font-semibold text-silver mb-2">Company <span class="text-teal">*</span></label>
+            <input type="text" id="assessment-company" name="company" required autocomplete="organization"
+              class="w-full px-5 py-4 bg-navy-light border border-silver/20 rounded-lg text-pure-white text-base placeholder-slate focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow" placeholder="Acme Corp" />
+          </div>
+
+          <div>
+            <label for="assessment-title" class="block text-sm font-semibold text-silver mb-2">Job Title <span class="text-teal">*</span></label>
+            <input type="text" id="assessment-title" name="title" required autocomplete="organization-title"
+              class="w-full px-5 py-4 bg-navy-light border border-silver/20 rounded-lg text-pure-white text-base placeholder-slate focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow" placeholder="CTO" />
+          </div>
+
+          <div>
+            <label for="assessment-message" class="block text-sm font-semibold text-silver mb-2">Message <span class="text-slate text-xs font-normal">(optional)</span></label>
+            <textarea id="assessment-message" name="message" rows="4"
+              class="w-full px-5 py-4 bg-navy-light border border-silver/20 rounded-lg text-pure-white text-base placeholder-slate focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent transition-shadow resize-none" placeholder="Tell us about your organization and what prompted your interest..."></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full px-8 py-4 bg-teal text-pure-white text-lg font-semibold rounded-lg hover:bg-teal-dark transition-colors">
+            Request Assessment
+          </button>
+
+          <p class="text-center text-slate text-xs">
+            We respond within 24 hours. No automated follow-up sequences. Just a conversation.
+          </p>
+        </form>
+      )}
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  // After Formspree submission, redirect back with ?submitted=true
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          window.location.href = '/contact/assessment/?submitted=true#book';
+        } else {
+          alert('Something went wrong. Please try again or email tony@nexusaiconsulting.com directly.');
+        }
+      } catch {
+        alert('Something went wrong. Please try again or email tony@nexusaiconsulting.com directly.');
+      }
+    });
+  }
+</script>

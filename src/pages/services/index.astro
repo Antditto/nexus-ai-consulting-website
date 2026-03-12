@@ -1,0 +1,245 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const services = [
+  {
+    name: 'Agentic Readiness Assessment',
+    description: 'Know exactly where you stand. A 6-week diagnostic that quantifies your organization\'s readiness for agentic AI across six dimensions — and identifies the highest-value opportunities to act on first.',
+    deliverables: ['Agentic Readiness Report', 'Use Case Heat Map', 'Quick-Win Brief', 'Executive Presentation'],
+    duration: '6 weeks',
+    priceRange: '$250K – $500K',
+    href: '/services/readiness-assessment',
+    step: 'Assessment',
+  },
+  {
+    name: 'Agentic Architecture Design',
+    description: 'The blueprint before the build. End-to-end technical architecture for deploying agentic AI at enterprise scale — agent topology, model strategy, integration patterns, security, governance.',
+    deliverables: ['Target-State Architecture Document', 'Model Strategy Brief', 'Agent Topology Blueprint', 'Security Architecture Package', 'Infrastructure Cost Model', 'Implementation Sequencing Plan'],
+    duration: '10 weeks',
+    priceRange: '$500K – $1.2M',
+    href: '/services/architecture-design',
+    step: 'Architecture',
+  },
+  {
+    name: 'Pilot Program Design & Execution',
+    description: 'Proof in production, not in a slide deck. We design, build, and operate a working agentic system in your environment — then measure what it delivers against real KPIs.',
+    deliverables: ['Pilot Design Document', 'Working Agentic System', 'Performance Dashboard', 'Weekly Status Reports', 'Pilot Results Report', 'Scale-Up Business Case', 'Knowledge Transfer Package'],
+    duration: '16 weeks',
+    priceRange: '$750K – $2M',
+    href: '/services/pilot-program',
+    step: 'Pilot',
+  },
+  {
+    name: 'AI Governance & Risk Framework',
+    description: 'Deploy with confidence in regulated environments. Comprehensive governance covering risk management, compliance mapping, oversight mechanisms, and board-level reporting — built specifically for agentic systems.',
+    deliverables: ['AI Governance Policy Suite', 'Agentic Risk Taxonomy', 'Governance Operating Model', 'Technical Control Specifications', 'Regulatory Compliance Map', 'Board Reporting Template', 'Training Curriculum'],
+    duration: '12 weeks',
+    priceRange: '$400K – $900K',
+    href: '/services/governance-framework',
+    step: 'Governance',
+  },
+  {
+    name: 'Transformation Roadmap',
+    description: 'The plan that gets funded. A board-ready, multi-year strategy that sequences your organization\'s journey from current state to full agentic AI integration — with investment cases, workforce planning, and quarterly milestones.',
+    deliverables: ['Transformation Roadmap', 'Board Deck', 'Initiative Portfolio', 'Investment Case', 'Workforce Transformation Plan', 'Change Management Playbook', '90-Day Quick-Start Plan'],
+    duration: '12 weeks',
+    priceRange: '$600K – $1.5M',
+    href: '/services/transformation-roadmap',
+    step: 'Roadmap',
+  },
+];
+
+const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Roadmap'];
+---
+
+<Layout title="Services" description="Five services. One outcome: measurable value from agentic AI. Strategy, architecture, governance, execution — priced on value, not hours.">
+  <!-- Hero -->
+  <section class="bg-navy text-pure-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl">Five services. One outcome: measurable value from agentic AI.</h1>
+      <p class="text-xl text-silver max-w-3xl">Each service line is designed to produce specific, tangible business results — not slide decks. We price on value, not hours. And we tie our compensation to your outcomes whenever we can.</p>
+    </div>
+  </section>
+
+  <!-- Service Journey -->
+  <section class="py-20 bg-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">The service journey</h2>
+      <p class="text-lg text-slate mb-12 max-w-3xl">Most clients start with an Assessment. Not all clients need all five services. Here is how they connect:</p>
+
+      <!-- Journey Flow -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-12">
+        {journeySteps.map((step, index) => (
+          <div class="flex items-center gap-4 w-full md:w-auto">
+            <div class="flex-1 md:flex-none">
+              <div class="bg-navy text-pure-white rounded-xl px-6 py-4 text-center min-w-[160px]">
+                <p class="font-bold">{step}</p>
+              </div>
+            </div>
+            {index < journeySteps.length - 1 && (
+              <svg class="hidden md:block w-6 h-6 text-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <p class="text-slate max-w-3xl">The Assessment tells you where you stand. Architecture tells you what to build. The Pilot proves it works. Governance ensures you can scale responsibly. The Roadmap sequences the whole journey. Each builds on the one before — or stands alone.</p>
+    </div>
+  </section>
+
+  <!-- Service Cards -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-12">Our services</h2>
+      <div class="space-y-8">
+        {services.map((service) => (
+          <div class="bg-pure-white border border-silver-light rounded-xl p-8 lg:p-10 hover:shadow-lg transition-shadow">
+            <div class="flex flex-col lg:flex-row lg:gap-12">
+              <div class="flex-1 mb-6 lg:mb-0">
+                <h3 class="text-2xl font-bold text-navy mb-4">{service.name}</h3>
+                <p class="text-slate leading-relaxed mb-6">{service.description}</p>
+                <div class="flex flex-wrap gap-4 text-sm mb-6">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-slate">{service.duration}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span class="text-slate">{service.priceRange}</span>
+                  </div>
+                </div>
+                <a href={service.href} class="inline-flex items-center gap-2 text-teal font-semibold hover:text-teal-dark transition-colors">
+                  Learn more
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+              <div class="lg:w-80 flex-shrink-0">
+                <p class="text-sm font-semibold text-navy mb-3">Key deliverables</p>
+                <ul class="space-y-2">
+                  {service.deliverables.map((deliverable) => (
+                    <li class="flex gap-2 text-sm text-slate">
+                      <svg class="w-4 h-4 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                      {deliverable}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Philosophy -->
+  <section class="py-20 bg-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">We never bill by the hour.</h2>
+        <p class="text-lg text-slate leading-relaxed">Hourly billing rewards slowness. It incentivizes large teams and long timelines. Our cost structure is fundamentally different — no salaries, no offices, no utilization math. We price relative to the business impact we create, and we make the total cost transparent before we start.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bundling -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Engagement bundles</h2>
+      <p class="text-lg text-slate mb-12 max-w-2xl">Most Fortune 500 clients engage across multiple service lines. We offer two standard bundles with meaningful savings.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Foundation Bundle -->
+        <div class="bg-pure-white border border-silver-light rounded-xl p-8 lg:p-10 relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-teal text-pure-white text-xs font-bold px-4 py-1.5 rounded-bl-lg">15% OFF</div>
+          <h3 class="text-2xl font-bold text-navy mb-4">Foundation Bundle</h3>
+          <p class="text-slate mb-6">Assessment + Governance + Roadmap. The strategic foundation before any technology decisions.</p>
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-2 text-sm text-slate">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Agentic Readiness Assessment
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              AI Governance & Risk Framework
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Transformation Roadmap
+            </div>
+          </div>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-navy text-pure-white font-semibold rounded-lg hover:bg-navy-light transition-colors text-sm">
+            Get started
+          </a>
+        </div>
+
+        <!-- Full Transformation -->
+        <div class="bg-navy text-pure-white rounded-xl p-8 lg:p-10 relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-teal text-pure-white text-xs font-bold px-4 py-1.5 rounded-bl-lg">20% OFF</div>
+          <h3 class="text-2xl font-bold mb-4">Full Transformation Bundle</h3>
+          <p class="text-silver mb-6">All five services, sequenced and integrated. Each builds on the outputs of the prior, eliminating redundant discovery.</p>
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-2 text-sm text-silver">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Agentic Readiness Assessment
+            </div>
+            <div class="flex items-center gap-2 text-sm text-silver">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Agentic Architecture Design
+            </div>
+            <div class="flex items-center gap-2 text-sm text-silver">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Pilot Program Design & Execution
+            </div>
+            <div class="flex items-center gap-2 text-sm text-silver">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              AI Governance & Risk Framework
+            </div>
+            <div class="flex items-center gap-2 text-sm text-silver">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Transformation Roadmap
+            </div>
+          </div>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-sm">
+            Get started
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-navy">
+    <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-pure-white mb-6">Not sure where to start?</h2>
+      <p class="text-silver text-lg mb-10 max-w-2xl mx-auto">The Readiness Assessment gives you a clear, quantified picture of your organization's agentic AI readiness — and a prioritized map of where to act first. Six weeks. No long-term commitment.</p>
+      <a href="/contact" class="inline-flex items-center px-8 py-4 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-lg">
+        Book a Readiness Assessment
+      </a>
+    </div>
+  </section>
+</Layout>

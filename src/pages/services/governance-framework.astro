@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+---
+
+<ServicePage
+  name="AI Governance & Risk Framework"
+  tagline="Deploy with confidence. Scale without regret."
+  subhead="The governance framework that lets you move fast on agentic AI without creating the risks that keep your board awake."
+  duration="12 weeks"
+  priceRange="$400K – $900K"
+  problem="Agentic AI systems make decisions and take actions autonomously. That is their value — and it is the source of every governance question a board will ask. Who is accountable when an agent makes a mistake? How do you prevent cascading failures? How do you satisfy the EU AI Act, NIST AI RMF, and your sector-specific regulators? These questions do not have off-the-shelf answers because agentic systems are fundamentally different from traditional AI."
+  deliverables={[
+    { name: 'AI Governance Policy Suite', description: 'Complete policies covering acceptable use, risk management, data governance, human oversight, vendor management, and incident response.' },
+    { name: 'Agentic Risk Taxonomy', description: 'Proprietary framework calibrated to agentic failure modes: autonomous action risk, cascading failure, prompt injection, data leakage, agent collusion.' },
+    { name: 'Governance Operating Model', description: 'Committee charters, role descriptions, RACI matrices, decision rights, reporting structures.' },
+    { name: 'Technical Control Specifications', description: 'Guardrails, monitoring, audit logging, kill switches, and output validation requirements that engineering teams can implement.' },
+    { name: 'Regulatory Compliance Map', description: 'Obligation-by-obligation mapping to EU AI Act, NIST AI RMF, ISO 42001, and sector regulations with gap analysis and remediation plan.' },
+    { name: 'Board Reporting Template', description: 'Quarterly AI governance report with KRIs and compliance status designed for board-level consumption.' },
+    { name: 'Training Curriculum', description: 'Role-based materials for executives, managers, practitioners, and end users covering governance requirements and responsible AI practices.' },
+  ]}
+  phases={[
+    { name: 'Governance Landscape Assessment', weeks: 'Weeks 1–3', description: 'Current-state policy review, regulatory obligation mapping, risk appetite workshops with board and C-suite, peer benchmarking of AI governance maturity.' },
+    { name: 'Risk Taxonomy Development', weeks: 'Weeks 2–5', description: 'Agentic-specific risk identification (autonomous action risk, cascading failure, prompt injection, data leakage, hallucination impact, agent collusion), risk scoring methodology, risk appetite thresholds per use case class.' },
+    { name: 'Policy Framework Design', weeks: 'Weeks 4–7', description: 'Acceptable use policies, model and agent approval processes, data governance for AI contexts, human oversight requirements by risk tier, vendor and third-party AI policies.' },
+    { name: 'Control Architecture', weeks: 'Weeks 5–8', description: 'Technical control specifications (guardrails, monitoring, kill switches, output validation), operational controls (review cadences, escalation paths), organizational controls (roles, committees, accountabilities).' },
+    { name: 'Operating Model Design', weeks: 'Weeks 7–9', description: 'AI governance committee charter and composition, Center of Excellence structure, RACI for AI lifecycle decisions, reporting dashboards for board and executive oversight.' },
+    { name: 'Regulatory Compliance Mapping', weeks: 'Weeks 8–10', description: 'Gap analysis against EU AI Act, NIST AI RMF, ISO 42001, and applicable sector regulations; remediation roadmap; compliance monitoring design.' },
+    { name: 'Validation & Adoption', weeks: 'Weeks 9–12', description: 'Tabletop exercises and scenario testing, stakeholder review and feedback incorporation, training curriculum design, rollout planning.' },
+  ]}
+  audience={[
+    'Chief Risk Officers and General Counsel who need to say "yes" to AI without saying "yes" to unmanaged risk',
+    'Heavily regulated industries where a compliance failure is existential',
+    'Organizations preparing for the EU AI Act and evolving US regulatory landscape',
+  ]}
+  pricingNote="Fixed fee with annual retainer option. Optional annual governance retainer ($150K–$350K/year) provides quarterly framework updates, regulatory change monitoring, incident advisory support, and annual governance maturity reassessment."
+  relatedServices={[
+    { name: 'Agentic Readiness Assessment', href: '/services/readiness-assessment', description: 'Understand your starting point before building the governance framework.' },
+    { name: 'Transformation Roadmap', href: '/services/transformation-roadmap', description: 'Integrate governance into a comprehensive multi-year transformation strategy.' },
+  ]}
+  ctaText="Start with a conversation"
+/>

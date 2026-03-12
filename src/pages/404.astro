@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found" description="The page you're looking for doesn't exist.">
+
+  <section class="min-h-[70vh] flex items-center justify-center bg-pure-white">
+    <div class="max-w-2xl mx-auto px-6 text-center py-24">
+      <p class="text-8xl md:text-9xl font-bold text-silver-light mb-8">404</p>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-navy mb-4">
+        This page doesn't exist yet.
+      </h1>
+      <p class="text-lg text-slate mb-10 max-w-md mx-auto">
+        Our agents are fast, but not that fast.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="inline-flex items-center justify-center px-8 py-4 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors">
+          Go to Home
+          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-pure-white text-navy font-semibold rounded-lg border border-silver-light hover:border-silver transition-colors">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

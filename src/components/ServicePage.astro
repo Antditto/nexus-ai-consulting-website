@@ -1,0 +1,218 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Phase {
+  name: string;
+  description: string;
+  weeks: string;
+}
+
+interface Deliverable {
+  name: string;
+  description: string;
+}
+
+interface PricingTier {
+  tier: string;
+  scope: string;
+  investment: string;
+}
+
+interface RelatedService {
+  name: string;
+  href: string;
+  description: string;
+}
+
+interface Props {
+  name: string;
+  tagline: string;
+  subhead: string;
+  duration: string;
+  priceRange: string;
+  problem: string;
+  deliverables: Deliverable[];
+  phases: Phase[];
+  audience: string[];
+  pricingTiers?: PricingTier[];
+  pricingNote?: string;
+  relatedServices: RelatedService[];
+  ctaText?: string;
+}
+
+const {
+  name,
+  tagline,
+  subhead,
+  duration,
+  priceRange,
+  problem,
+  deliverables,
+  phases,
+  audience,
+  pricingTiers,
+  pricingNote,
+  relatedServices,
+  ctaText = 'Start with a conversation',
+} = Astro.props;
+---
+
+<Layout title={name} description={subhead}>
+  <!-- Hero -->
+  <section class="bg-navy text-pure-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28">
+      <p class="text-teal font-semibold text-sm uppercase tracking-wider mb-4">Services</p>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl">{tagline}</h1>
+      <p class="text-xl text-silver max-w-3xl mb-8">{subhead}</p>
+      <div class="flex flex-wrap gap-6 text-sm">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-silver">{duration}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="text-silver">{priceRange}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">The problem</h2>
+        <p class="text-lg text-slate leading-relaxed">{problem}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deliverables -->
+  <section class="py-20 bg-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">What you get</h2>
+      <p class="text-lg text-slate mb-12 max-w-2xl">Every deliverable is designed to drive decisions, not sit on a shelf.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {deliverables.map((item, index) => (
+          <div class="bg-white border border-silver-light rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-5">
+              <span class="text-teal font-bold text-lg">{index + 1}</span>
+            </div>
+            <h3 class="text-lg font-bold text-navy mb-3">{item.name}</h3>
+            <p class="text-slate text-sm leading-relaxed">{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">How it works</h2>
+      <p class="text-lg text-slate mb-12 max-w-2xl">A structured process that moves fast without cutting corners.</p>
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="hidden lg:block absolute left-8 top-0 bottom-0 w-px bg-silver-light"></div>
+        <div class="space-y-8">
+          {phases.map((phase, index) => (
+            <div class="relative flex gap-8">
+              <div class="hidden lg:flex flex-shrink-0 w-16 h-16 bg-navy rounded-xl items-center justify-center z-10">
+                <span class="text-pure-white font-bold text-lg">{index + 1}</span>
+              </div>
+              <div class="flex-1 bg-pure-white border border-silver-light rounded-xl p-8">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                  <h3 class="text-lg font-bold text-navy">{phase.name}</h3>
+                  <span class="text-sm text-teal font-semibold">{phase.weeks}</span>
+                </div>
+                <p class="text-slate text-sm leading-relaxed">{phase.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who This Is For -->
+  <section class="py-20 bg-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-navy mb-8">Who this is for</h2>
+        <ul class="space-y-5">
+          {audience.map((item) => (
+            <li class="flex gap-4">
+              <svg class="w-6 h-6 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-slate text-lg">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Investment</h2>
+      <p class="text-lg text-slate mb-12 max-w-2xl">Fixed-value pricing. No hourly billing. Total cost transparent before we start.</p>
+      {pricingTiers && pricingTiers.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {pricingTiers.map((tier) => (
+            <div class="bg-pure-white border border-silver-light rounded-xl p-8 hover:border-teal transition-colors">
+              <h3 class="text-lg font-bold text-navy mb-2">{tier.tier}</h3>
+              <p class="text-sm text-slate mb-6">{tier.scope}</p>
+              <p class="text-2xl font-bold text-teal">{tier.investment}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="bg-pure-white border border-silver-light rounded-xl p-8 inline-block mb-8">
+          <p class="text-sm text-slate mb-2">Typical investment range</p>
+          <p class="text-3xl font-bold text-teal">{priceRange}</p>
+        </div>
+      )}
+      {pricingNote && (
+        <p class="text-sm text-slate max-w-2xl">{pricingNote}</p>
+      )}
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-20 bg-pure-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-12">Related services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {relatedServices.map((service) => (
+          <a href={service.href} class="group bg-white border border-silver-light rounded-xl p-8 hover:shadow-lg hover:border-teal transition-all">
+            <h3 class="text-lg font-bold text-navy mb-3 group-hover:text-teal transition-colors">{service.name}</h3>
+            <p class="text-slate text-sm leading-relaxed mb-4">{service.description}</p>
+            <span class="text-teal font-semibold text-sm inline-flex items-center gap-1">
+              Learn more
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-navy">
+    <div class="max-w-7xl mx-auto px-6 py-20 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-pure-white mb-6">{ctaText}</h2>
+      <p class="text-silver text-lg mb-10 max-w-2xl mx-auto">The Readiness Assessment gives you a clear, quantified picture of your organization's agentic AI readiness — and a prioritized map of where to act first.</p>
+      <a href="/contact" class="inline-flex items-center px-8 py-4 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-lg">
+        Book a Readiness Assessment
+      </a>
+    </div>
+  </section>
+</Layout>

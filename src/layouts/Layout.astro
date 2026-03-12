@@ -1,0 +1,137 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "The world's first AI-native consulting firm. We advise Fortune 500 companies on agentic AI adoption." } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={`${title} | Nexus AI Consulting`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://nexusaiconsulting.com/og-image.svg" />
+    <meta property="og:url" content={`https://nexusaiconsulting.com${Astro.url.pathname}`} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | Nexus AI Consulting`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://nexusaiconsulting.com/og-image.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <title>{title} | Nexus AI Consulting</title>
+    <style is:global>
+      @import "../styles/global.css";
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <nav class="sticky top-0 z-50 bg-pure-white/95 backdrop-blur-sm border-b border-silver-light">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold tracking-tight text-navy">NEXUS</a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="/about" class="text-sm font-medium text-slate hover:text-navy transition-colors">About</a>
+          <div class="relative group">
+            <a href="/services" class="text-sm font-medium text-slate hover:text-navy transition-colors">Services</a>
+            <div class="absolute top-full left-0 pt-2 hidden group-hover:block">
+              <div class="bg-pure-white rounded-lg shadow-lg border border-silver-light p-4 w-64">
+                <a href="/services/readiness-assessment" class="block py-2 px-3 text-sm text-slate hover:text-navy hover:bg-white rounded">Readiness Assessment</a>
+                <a href="/services/architecture-design" class="block py-2 px-3 text-sm text-slate hover:text-navy hover:bg-white rounded">Architecture Design</a>
+                <a href="/services/pilot-program" class="block py-2 px-3 text-sm text-slate hover:text-navy hover:bg-white rounded">Pilot Program</a>
+                <a href="/services/governance-framework" class="block py-2 px-3 text-sm text-slate hover:text-navy hover:bg-white rounded">Governance Framework</a>
+                <a href="/services/transformation-roadmap" class="block py-2 px-3 text-sm text-slate hover:text-navy hover:bg-white rounded">Transformation Roadmap</a>
+              </div>
+            </div>
+          </div>
+          <a href="/team" class="text-sm font-medium text-slate hover:text-navy transition-colors">Our Team</a>
+          <a href="/methodology" class="text-sm font-medium text-slate hover:text-navy transition-colors">Methodology</a>
+          <a href="/insights" class="text-sm font-medium text-slate hover:text-navy transition-colors">Insights</a>
+          <a href="/ask-atlas" class="text-sm font-medium text-teal hover:text-teal-dark transition-colors">Ask Atlas</a>
+          <a href="/demo" class="text-sm font-semibold text-teal hover:text-teal-dark transition-colors border border-teal/30 px-3 py-1 rounded-md hover:bg-teal/5">Live Demo</a>
+        </div>
+        <a href="/contact" class="hidden md:inline-flex items-center px-5 py-2 bg-teal text-pure-white text-sm font-semibold rounded-lg hover:bg-teal-dark transition-colors">
+          Book Assessment
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Menu">
+          <svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-pure-white border-t border-silver-light">
+        <div class="px-6 py-4 space-y-3">
+          <a href="/about" class="block text-sm font-medium text-slate">About</a>
+          <a href="/services" class="block text-sm font-medium text-slate">Services</a>
+          <a href="/team" class="block text-sm font-medium text-slate">Our Team</a>
+          <a href="/methodology" class="block text-sm font-medium text-slate">Methodology</a>
+          <a href="/insights" class="block text-sm font-medium text-slate">Insights</a>
+          <a href="/ask-atlas" class="block text-sm font-medium text-teal">Ask Atlas</a>
+          <a href="/demo" class="block text-sm font-semibold text-teal border border-teal/30 px-3 py-1.5 rounded-md text-center">Live Demo</a>
+          <a href="/contact" class="block w-full text-center px-5 py-2 bg-teal text-pure-white text-sm font-semibold rounded-lg">Book Assessment</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="bg-navy text-pure-white">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div>
+            <p class="text-xl font-bold tracking-tight mb-2">NEXUS</p>
+            <p class="text-silver text-sm">We are the proof.</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold mb-4 text-silver">Services</p>
+            <div class="space-y-2">
+              <a href="/services/readiness-assessment" class="block text-sm text-silver hover:text-pure-white transition-colors">Readiness Assessment</a>
+              <a href="/services/architecture-design" class="block text-sm text-silver hover:text-pure-white transition-colors">Architecture Design</a>
+              <a href="/services/pilot-program" class="block text-sm text-silver hover:text-pure-white transition-colors">Pilot Program</a>
+              <a href="/services/governance-framework" class="block text-sm text-silver hover:text-pure-white transition-colors">Governance Framework</a>
+              <a href="/services/transformation-roadmap" class="block text-sm text-silver hover:text-pure-white transition-colors">Transformation Roadmap</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-semibold mb-4 text-silver">Company</p>
+            <div class="space-y-2">
+              <a href="/about" class="block text-sm text-silver hover:text-pure-white transition-colors">About</a>
+              <a href="/team" class="block text-sm text-silver hover:text-pure-white transition-colors">Our Team</a>
+              <a href="/methodology" class="block text-sm text-silver hover:text-pure-white transition-colors">Methodology</a>
+              <a href="/insights" class="block text-sm text-silver hover:text-pure-white transition-colors">Insights</a>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-semibold mb-4 text-silver">Connect</p>
+            <div class="space-y-2">
+              <a href="/contact" class="block text-sm text-silver hover:text-pure-white transition-colors">Book Assessment</a>
+              <a href="/insights/agentic-enterprise-whitepaper" class="block text-sm text-silver hover:text-pure-white transition-colors">Download Whitepaper</a>
+              <a href="/contact" class="block text-sm text-silver hover:text-pure-white transition-colors">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-navy-light text-sm text-slate">
+          <p>&copy; {new Date().getFullYear()} Nexus AI Consulting. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+    </script>
+  </body>
+</html>

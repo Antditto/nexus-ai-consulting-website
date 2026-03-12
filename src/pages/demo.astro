@@ -1,0 +1,1041 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Live Demo" description="Experience a preview of the Nexus AI Consulting Agentic Readiness Assessment. See what it feels like to work with our AI agents in a 5-minute interactive diagnostic.">
+
+  <!-- Hero Section -->
+  <section class="bg-navy text-pure-white py-20 lg:py-28">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-teal font-semibold text-sm uppercase tracking-widest mb-4">Interactive Preview</p>
+      <h1 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">See Nexus in Action</h1>
+      <p class="text-xl text-silver max-w-2xl mx-auto mb-4">Experience a Live Readiness Assessment Preview</p>
+      <p class="text-silver max-w-xl mx-auto text-sm leading-relaxed">
+        This is a 5-minute interactive preview of our full 6-week Agentic Readiness Assessment. Answer a few diagnostic questions and receive a preliminary readiness score with personalized insights — instantly.
+      </p>
+    </div>
+  </section>
+
+  <!-- Assessment Flow -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <!-- Progress Bar -->
+      <div id="progress-bar" class="mb-12">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-6">
+            <button data-step="1" class="step-dot active flex items-center gap-2 text-sm font-semibold text-teal transition-colors">
+              <span class="w-8 h-8 rounded-full bg-teal text-pure-white flex items-center justify-center text-xs font-bold">1</span>
+              <span class="hidden sm:inline">Profile</span>
+            </button>
+            <div class="w-8 sm:w-12 h-px bg-silver-light"></div>
+            <button data-step="2" class="step-dot flex items-center gap-2 text-sm font-semibold text-slate transition-colors">
+              <span class="w-8 h-8 rounded-full bg-silver-light text-slate flex items-center justify-center text-xs font-bold">2</span>
+              <span class="hidden sm:inline">Assessment</span>
+            </button>
+            <div class="w-8 sm:w-12 h-px bg-silver-light"></div>
+            <button data-step="3" class="step-dot flex items-center gap-2 text-sm font-semibold text-slate transition-colors">
+              <span class="w-8 h-8 rounded-full bg-silver-light text-slate flex items-center justify-center text-xs font-bold">3</span>
+              <span class="hidden sm:inline">Results</span>
+            </button>
+            <div class="w-8 sm:w-12 h-px bg-silver-light"></div>
+            <button data-step="4" class="step-dot flex items-center gap-2 text-sm font-semibold text-slate transition-colors">
+              <span class="w-8 h-8 rounded-full bg-silver-light text-slate flex items-center justify-center text-xs font-bold">4</span>
+              <span class="hidden sm:inline">Next Steps</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 1: Company Profile -->
+      <div id="step-1" class="step-panel">
+        <h2 class="text-2xl font-bold text-navy mb-2">Company Profile</h2>
+        <p class="text-slate text-sm mb-8">Tell us about your organization so we can tailor the assessment.</p>
+
+        <div class="space-y-6">
+          <div>
+            <label for="company-name" class="block text-sm font-semibold text-navy mb-2">Company Name</label>
+            <input type="text" id="company-name" placeholder="e.g., Acme Corporation" class="w-full px-4 py-3 rounded-lg border border-silver-light bg-pure-white text-navy text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors" />
+          </div>
+
+          <div>
+            <label for="industry" class="block text-sm font-semibold text-navy mb-2">Industry</label>
+            <select id="industry" class="w-full px-4 py-3 rounded-lg border border-silver-light bg-pure-white text-navy text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors">
+              <option value="">Select your industry</option>
+              <option value="Financial Services">Financial Services</option>
+              <option value="Healthcare">Healthcare</option>
+              <option value="Tech/SaaS">Tech/SaaS</option>
+              <option value="Manufacturing">Manufacturing</option>
+              <option value="Retail">Retail</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="revenue" class="block text-sm font-semibold text-navy mb-2">Annual Revenue</label>
+              <select id="revenue" class="w-full px-4 py-3 rounded-lg border border-silver-light bg-pure-white text-navy text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors">
+                <option value="">Select range</option>
+                <option value="$500M-$1B">$500M - $1B</option>
+                <option value="$1B-$5B">$1B - $5B</option>
+                <option value="$5B-$20B">$5B - $20B</option>
+                <option value="$20B+">$20B+</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="employees" class="block text-sm font-semibold text-navy mb-2">Number of Employees</label>
+              <select id="employees" class="w-full px-4 py-3 rounded-lg border border-silver-light bg-pure-white text-navy text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-colors">
+                <option value="">Select range</option>
+                <option value="1K-5K">1,000 - 5,000</option>
+                <option value="5K-20K">5,000 - 20,000</option>
+                <option value="20K-50K">20,000 - 50,000</option>
+                <option value="50K+">50,000+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 flex justify-end">
+          <button id="btn-to-step-2" class="px-8 py-3 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-sm">
+            Begin Assessment &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: AI Maturity Questions -->
+      <div id="step-2" class="step-panel hidden">
+        <h2 class="text-2xl font-bold text-navy mb-2">Agentic Readiness Diagnostic</h2>
+        <p class="text-slate text-sm mb-8">Answer five diagnostic questions based on the CATALYST framework dimensions.</p>
+
+        <!-- Question container -->
+        <div id="question-container">
+          <!-- Questions rendered by JS -->
+        </div>
+
+        <div class="mt-10 flex justify-between">
+          <button id="btn-prev-q" class="px-6 py-3 border border-silver-light text-slate font-semibold rounded-lg hover:bg-white transition-colors text-sm">
+            &larr; Previous
+          </button>
+          <button id="btn-next-q" class="px-8 py-3 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-sm">
+            Next &rarr;
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Results -->
+      <div id="step-3" class="step-panel hidden">
+        <!-- Loading animation -->
+        <div id="results-loading" class="text-center py-20">
+          <div class="inline-flex items-center gap-3 mb-6">
+            <div class="w-3 h-3 bg-teal rounded-full animate-bounce" style="animation-delay: 0ms;"></div>
+            <div class="w-3 h-3 bg-teal rounded-full animate-bounce" style="animation-delay: 150ms;"></div>
+            <div class="w-3 h-3 bg-teal rounded-full animate-bounce" style="animation-delay: 300ms;"></div>
+          </div>
+          <p class="text-navy font-semibold text-lg" id="loading-text">Analyzing your responses...</p>
+          <p class="text-slate text-sm mt-2" id="loading-subtext">Running diagnostic against CATALYST framework</p>
+        </div>
+
+        <!-- Results content -->
+        <div id="results-content" class="hidden">
+          <!-- Score header -->
+          <div class="text-center mb-10">
+            <p class="text-sm font-semibold text-teal uppercase tracking-widest mb-2">Preliminary Assessment for</p>
+            <h2 class="text-2xl font-bold text-navy mb-6" id="results-company-name"></h2>
+
+            <div class="inline-flex flex-col items-center bg-navy rounded-2xl px-12 py-8">
+              <p class="text-silver text-xs uppercase tracking-widest mb-1">Agentic Readiness Score</p>
+              <p class="text-5xl font-bold text-pure-white mb-1" id="results-score">0</p>
+              <p class="text-silver text-xs">out of 100</p>
+              <div class="mt-3 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider" id="results-tier-badge"></div>
+            </div>
+          </div>
+
+          <!-- Maturity Level -->
+          <div class="mb-10 p-6 bg-white rounded-xl border border-silver-light">
+            <h3 class="text-lg font-bold text-navy mb-2">Maturity Level: <span id="results-maturity" class="text-teal"></span></h3>
+            <p class="text-slate text-sm" id="results-maturity-desc"></p>
+          </div>
+
+          <!-- Radar Chart -->
+          <div class="mb-10">
+            <h3 class="text-lg font-bold text-navy mb-4">Dimension Breakdown</h3>
+            <div class="flex justify-center">
+              <svg id="radar-chart" viewBox="0 0 400 400" class="w-full max-w-md"></svg>
+            </div>
+          </div>
+
+          <!-- Key Insights -->
+          <div class="mb-10">
+            <h3 class="text-lg font-bold text-navy mb-4">Key Insights</h3>
+            <div id="insights-container" class="space-y-4"></div>
+          </div>
+
+          <!-- Benchmark -->
+          <div class="mb-10 p-6 bg-navy/5 rounded-xl border border-navy/10">
+            <h3 class="text-lg font-bold text-navy mb-4">Industry Benchmark</h3>
+            <p class="text-slate text-sm mb-4" id="benchmark-intro"></p>
+            <div id="benchmark-items" class="space-y-3"></div>
+          </div>
+
+          <!-- Next step CTA -->
+          <div class="mt-10 flex justify-center">
+            <button id="btn-to-step-4" class="px-8 py-3 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-sm">
+              See What Comes Next &rarr;
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4: CTA -->
+      <div id="step-4" class="step-panel hidden">
+        <div class="text-center py-8">
+          <p class="text-teal font-semibold text-sm uppercase tracking-widest mb-4">You just experienced 5 minutes.</p>
+          <h2 class="text-3xl font-bold text-navy mb-6">The full assessment takes 6 weeks.</h2>
+
+          <div class="max-w-xl mx-auto text-left mb-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="p-5 bg-white rounded-xl border border-silver-light">
+                <p class="text-xs font-bold text-teal uppercase tracking-wider mb-2">This Preview</p>
+                <ul class="text-sm text-slate space-y-2">
+                  <li>5 self-reported questions</li>
+                  <li>Algorithmic scoring</li>
+                  <li>Directional insights</li>
+                  <li>High-level benchmarks</li>
+                </ul>
+              </div>
+              <div class="p-5 bg-navy rounded-xl text-pure-white">
+                <p class="text-xs font-bold text-teal uppercase tracking-wider mb-2">Full Assessment</p>
+                <ul class="text-sm text-silver space-y-2">
+                  <li>20-30 stakeholder interviews</li>
+                  <li>Technical infrastructure audit</li>
+                  <li>Data pipeline evaluation</li>
+                  <li>6-dimension diagnostic (scored 1-100)</li>
+                  <li>40-60 page executive report</li>
+                  <li>Use case heat map with ROI models</li>
+                  <li>Peer benchmarking against industry</li>
+                  <li>Board-ready presentation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-8">
+            <p class="text-slate text-sm mb-6 max-w-lg mx-auto">
+              The Agentic Readiness Assessment is a $250K-$500K fixed-fee engagement delivered in 6 weeks by a dedicated team of AI agents. No hourly billing. No ambiguity. Quantified results.
+            </p>
+          </div>
+
+          <a href="/contact" class="inline-flex items-center px-8 py-4 bg-teal text-pure-white font-bold rounded-lg hover:bg-teal-dark transition-colors text-base">
+            Book Your Full Assessment
+          </a>
+          <p class="text-slate text-xs mt-3">Or <a href="/services/readiness-assessment" class="text-teal hover:text-teal-dark underline">learn more about the Readiness Assessment</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .step-panel {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .option-card {
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .option-card:hover {
+    border-color: #0EA5A0;
+    background-color: rgba(14, 165, 160, 0.03);
+  }
+
+  .option-card.selected {
+    border-color: #0EA5A0;
+    background-color: rgba(14, 165, 160, 0.06);
+    box-shadow: 0 0 0 2px rgba(14, 165, 160, 0.15);
+  }
+
+  .option-card.selected .option-radio {
+    background-color: #0EA5A0;
+    border-color: #0EA5A0;
+  }
+
+  .question-counter {
+    font-variant-numeric: tabular-nums;
+  }
+
+  #results-score {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .insight-card {
+    border-left: 3px solid #0EA5A0;
+  }
+</style>
+
+<script>
+  // =========================================================================
+  // Data: Questions, Insights, Benchmarks
+  // =========================================================================
+
+  const QUESTIONS = [
+    {
+      id: 'ai_usage',
+      dimension: 'AI/ML Footprint',
+      label: 'Current AI Usage',
+      question: 'How would you describe your organization\'s current use of AI and machine learning?',
+      options: [
+        { score: 1, text: 'No AI in production', desc: 'We have no AI or ML models deployed in any business process.' },
+        { score: 2, text: 'Isolated experiments', desc: 'A few proof-of-concept projects, but nothing integrated into core operations.' },
+        { score: 3, text: 'AI in select workflows', desc: 'Multiple AI/ML models in production across 2-3 business functions.' },
+        { score: 4, text: 'AI embedded in core operations', desc: 'AI is integral to how we operate, with models driving decisions across the enterprise.' },
+      ],
+    },
+    {
+      id: 'data_infra',
+      dimension: 'Data Infrastructure',
+      label: 'Data Infrastructure',
+      question: 'How mature is your organization\'s data infrastructure?',
+      options: [
+        { score: 1, text: 'Siloed spreadsheets and databases', desc: 'Data is trapped in departmental systems with no centralized access or governance.' },
+        { score: 2, text: 'Basic data warehouse in place', desc: 'We have centralized some data, but quality is inconsistent and access is limited.' },
+        { score: 3, text: 'Modern data platform with governance', desc: 'Enterprise data platform with quality standards, governance, and self-service analytics.' },
+        { score: 4, text: 'Unified data platform with real-time pipelines', desc: 'Real-time data pipelines, high-quality curated datasets, and comprehensive lineage tracking.' },
+      ],
+    },
+    {
+      id: 'governance',
+      dimension: 'AI Governance',
+      label: 'AI Governance',
+      question: 'What is the current state of AI governance in your organization?',
+      options: [
+        { score: 1, text: 'No formal policy', desc: 'We have no policies, guidelines, or oversight mechanisms for AI systems.' },
+        { score: 2, text: 'Basic guidelines exist', desc: 'Some acceptable-use guidelines drafted, but no systematic compliance or enforcement.' },
+        { score: 3, text: 'Formal governance framework', desc: 'AI policies in place, compliance processes defined, responsible AI principles adopted.' },
+        { score: 4, text: 'Comprehensive AI governance framework', desc: 'Full policy suite, automated compliance monitoring, audit mechanisms, and regulatory engagement.' },
+      ],
+    },
+    {
+      id: 'exec_alignment',
+      dimension: 'Executive Alignment',
+      label: 'Executive Alignment',
+      question: 'How aligned is your executive leadership on AI transformation?',
+      options: [
+        { score: 1, text: 'No executive sponsor', desc: 'AI is not on the executive agenda. No C-level champion or budget allocation.' },
+        { score: 2, text: 'Single executive champion', desc: 'One senior leader pushing AI, but limited buy-in from peers or the board.' },
+        { score: 3, text: 'Executive consensus emerging', desc: 'Multiple C-suite leaders engaged, dedicated AI budget approved, strategy forming.' },
+        { score: 4, text: 'C-suite AI steering committee', desc: 'Active steering committee, board-level AI agenda, unified vision with funded roadmap.' },
+      ],
+    },
+    {
+      id: 'change_readiness',
+      dimension: 'Change Readiness',
+      label: 'Change Readiness',
+      question: 'How ready is your organization to embrace AI-driven transformation?',
+      options: [
+        { score: 1, text: 'Significant resistance expected', desc: 'Widespread fear of AI, no change management capability, strong opposition likely.' },
+        { score: 2, text: 'Cautious but open', desc: 'Interest exists but skepticism in middle management. Limited AI literacy across teams.' },
+        { score: 3, text: 'Actively preparing', desc: 'Training programs underway, experimentation encouraged, growing organizational enthusiasm.' },
+        { score: 4, text: 'Organization actively embracing AI transformation', desc: 'High AI literacy, innovation culture, failures treated as learning, broad organizational buy-in.' },
+      ],
+    },
+  ];
+
+  // Insight templates per dimension — 4 each
+  const INSIGHT_TEMPLATES = {
+    ai_usage: [
+      {
+        threshold: 1,
+        title: 'Greenfield Opportunity in AI Deployment',
+        text: 'Your organization has not yet deployed AI in production. While this means there is no legacy AI debt, it also means there is no institutional muscle memory for operating AI systems. The full assessment would map your highest-value use cases and identify where agentic AI can deliver rapid ROI within your existing operations.',
+      },
+      {
+        threshold: 2,
+        title: 'Moving Beyond AI Experiments',
+        text: 'Isolated AI experiments are a common starting point, but the gap between a proof of concept and production-grade agentic systems is significant. The full assessment would evaluate which experiments are worth scaling, identify the infrastructure gaps preventing production deployment, and design a path from experimentation to operationalization.',
+      },
+      {
+        threshold: 3,
+        title: 'Foundation for Agentic Expansion',
+        text: 'You have AI working in select workflows, which provides valuable institutional experience. The full assessment would evaluate whether your current AI infrastructure can support the more autonomous, multi-step reasoning that agentic systems require, and identify the specific architectural upgrades needed.',
+      },
+      {
+        threshold: 4,
+        title: 'Advanced AI Maturity — Ready for Agentic Leap',
+        text: 'With AI embedded in core operations, your organization has strong foundations. The full assessment would focus on how to evolve from traditional ML models to agentic systems that can reason, plan, and act autonomously — a qualitatively different capability that unlocks new categories of business value.',
+      },
+    ],
+    data_infra: [
+      {
+        threshold: 1,
+        title: 'Data Silos Are Your Biggest Blocker',
+        text: 'Agentic AI systems need access to high-quality, real-time data to make autonomous decisions. Siloed data environments are the single most common barrier to agentic adoption. The full assessment would conduct a detailed data pipeline evaluation and design a remediation roadmap to make your data agent-accessible.',
+      },
+      {
+        threshold: 2,
+        title: 'Data Warehouse Is a Start — But Agents Need More',
+        text: 'A centralized data warehouse is necessary but not sufficient for agentic AI. Agents need real-time access, semantic understanding, and fine-grained permissions. The full assessment would profile your data quality, evaluate access patterns, and design the data architecture upgrades needed for agent consumption.',
+      },
+      {
+        threshold: 3,
+        title: 'Strong Data Platform — Optimize for Agent Access',
+        text: 'Your modern data platform provides a strong foundation. The full assessment would evaluate whether your platform supports the specific access patterns agentic systems require: real-time APIs, semantic layers for natural language queries, and the audit trail capabilities needed for agent accountability.',
+      },
+      {
+        threshold: 4,
+        title: 'Data Infrastructure Is Agentic-Ready',
+        text: 'Your unified data platform with real-time pipelines is well-positioned for agentic workloads. The full assessment would focus on fine-tuning access controls, building the semantic layer agents use to understand your data, and establishing provenance tracking for agent-generated decisions.',
+      },
+    ],
+    governance: [
+      {
+        threshold: 1,
+        title: 'Governance Gap Is a Critical Risk',
+        text: 'Deploying agentic AI without governance is like giving autonomous decision-making authority with no oversight. This is the dimension where organizations face the most regulatory and reputational exposure. The full assessment would design a risk-tiered governance framework calibrated to your industry\'s regulatory requirements.',
+      },
+      {
+        threshold: 2,
+        title: 'Basic Guidelines Need Formalization',
+        text: 'Having initial guidelines is a positive signal, but agentic systems require governance that goes well beyond acceptable-use policies. The full assessment would evaluate your guidelines against EU AI Act requirements, NIST AI RMF, and industry-specific regulations, then build a comprehensive governance operating model.',
+      },
+      {
+        threshold: 3,
+        title: 'Governance Framework — Ready for Agentic Extensions',
+        text: 'Your formal governance framework provides a solid base. Agentic systems introduce new governance challenges: autonomous action risk, cascading failures, and agent-to-agent interactions. The full assessment would extend your framework to cover these agentic-specific risk categories.',
+      },
+      {
+        threshold: 4,
+        title: 'Governance Maturity Is a Competitive Advantage',
+        text: 'Your comprehensive governance framework positions you ahead of most organizations. The full assessment would focus on operationalizing governance for agentic workloads: automated compliance monitoring, real-time guardrails, and the predictive governance mechanisms that enable higher agent autonomy.',
+      },
+    ],
+    exec_alignment: [
+      {
+        threshold: 1,
+        title: 'Executive Sponsorship Is the First Prerequisite',
+        text: 'Without an executive sponsor, AI transformation initiatives consistently fail — regardless of technical capability. The full assessment includes executive alignment workshops designed to build shared understanding and secure the sponsorship required before any technology decisions are made.',
+      },
+      {
+        threshold: 2,
+        title: 'Single Champion Needs Coalition Support',
+        text: 'A single executive champion is a starting point, but agentic AI transformation requires cross-functional buy-in. The full assessment would map the political dynamics, identify potential coalition partners, and design an executive alignment strategy that broadens sponsorship beyond a single leader.',
+      },
+      {
+        threshold: 3,
+        title: 'Executive Consensus Is Forming — Accelerate It',
+        text: 'Multiple engaged C-suite leaders and a dedicated budget signal strong momentum. The full assessment would formalize this consensus into a governance structure with clear decision rights, investment stage-gates, and the accountability model needed to sustain transformation through inevitable setbacks.',
+      },
+      {
+        threshold: 4,
+        title: 'Strong Executive Alignment — Focus on Execution',
+        text: 'A C-suite steering committee with a funded roadmap is the ideal starting position. The full assessment would ensure this alignment translates into operational execution by defining initiative sequencing, resource allocation, and the board-level reporting cadence that maintains momentum.',
+      },
+    ],
+    change_readiness: [
+      {
+        threshold: 1,
+        title: 'Change Resistance Will Derail Technical Progress',
+        text: 'Significant organizational resistance is the most underestimated risk in AI transformation. Technology is the easy part — changing how an organization makes decisions and tolerates risk is the hard part. The full assessment includes stakeholder mapping, resistance profiling, and a change management strategy designed for your specific organizational dynamics.',
+      },
+      {
+        threshold: 2,
+        title: 'Cautious Culture Requires Deliberate Trust-Building',
+        text: 'A cautious-but-open culture is workable, but trust in AI-driven decisions must be built through evidence, not presentations. The full assessment would design a pilot strategy that generates visible wins early, building the organizational confidence needed to scale. Quick wins in the first 90 days change the narrative.',
+      },
+      {
+        threshold: 3,
+        title: 'Momentum Is Building — Channel It Strategically',
+        text: 'Active preparation and growing enthusiasm are strong signals. The full assessment would channel this energy by identifying the highest-visibility use cases for early deployment, designing training programs that convert enthusiasm into capability, and creating the feedback loops that sustain momentum.',
+      },
+      {
+        threshold: 4,
+        title: 'Cultural Readiness Is Your Strongest Asset',
+        text: 'An organization that actively embraces AI transformation is rare and valuable. The full assessment would leverage this cultural advantage by recommending a more aggressive transformation timeline, identifying opportunities for agentic systems in high-autonomy roles, and positioning your organization as an industry leader in agentic adoption.',
+      },
+    ],
+  };
+
+  // Industry benchmarks
+  const INDUSTRY_BENCHMARKS = {
+    'Financial Services': {
+      exploring: [
+        'Financial services firms at the Exploring stage typically have 12-18 months of foundational work before launching their first agentic pilot.',
+        'Regulatory complexity in financial services means governance frameworks take 40% longer to develop than in less regulated industries.',
+        'Early-stage financial services firms report an average of 3.2 data silos that need consolidation before agentic systems can operate effectively.',
+      ],
+      experimenting: [
+        'Financial services firms at the Experimenting stage typically achieve first production deployment within 6-9 months of completing architecture design.',
+        'Compliance automation is the most common first agentic use case in financial services, with average cycle time reductions of 60-70%.',
+        'Financial services organizations at this stage invest an average of $2-4M in their first year of agentic infrastructure.',
+      ],
+      operationalizing: [
+        'Financial services firms at the Operationalizing stage typically see 30-50% efficiency gains in document processing and compliance workflows.',
+        'Organizations at this maturity level in financial services average 4-6 agentic systems in production across risk, compliance, and operations.',
+        'Peer firms at this stage report that governance maturity is the primary bottleneck to scaling — not technology.',
+      ],
+      transforming: [
+        'Leading financial services firms are deploying multi-agent systems for real-time risk assessment and regulatory reporting.',
+        'At this maturity level, peers report 5-8x return on their agentic AI investment within 24 months of initial deployment.',
+        'Frontier financial services firms are using agentic AI to create entirely new service categories that were not economically viable with human-only delivery.',
+      ],
+    },
+    Healthcare: {
+      exploring: [
+        'Healthcare organizations at the Exploring stage face unique challenges around HIPAA compliance and clinical validation requirements.',
+        'Most healthcare organizations at this stage require 6-12 months of data governance work before any AI deployment.',
+        'The average healthcare organization has 8-12 disconnected data systems that agents would need to navigate.',
+      ],
+      experimenting: [
+        'Healthcare organizations at the Experimenting stage most commonly pilot agentic AI in administrative workflows before clinical applications.',
+        'Prior authorization automation is the highest-ROI first use case in healthcare, with average processing time reductions of 75%.',
+        'Healthcare organizations at this stage need to build clinical governance frameworks alongside technical governance.',
+      ],
+      operationalizing: [
+        'Healthcare organizations at the Operationalizing stage report 40-60% reduction in administrative burden for clinical staff.',
+        'Peer organizations at this maturity level have 3-5 agentic systems in production, primarily in revenue cycle and care coordination.',
+        'Interoperability across EHR systems is the top technical challenge for healthcare organizations scaling agentic AI.',
+      ],
+      transforming: [
+        'Leading healthcare organizations are deploying agentic AI in clinical decision support with physician-in-the-loop oversight.',
+        'At this maturity level, healthcare peers report significant improvements in patient outcomes alongside operational efficiency.',
+        'Frontier healthcare organizations are building multi-agent systems that coordinate across clinical, administrative, and patient-facing workflows.',
+      ],
+    },
+    'Tech/SaaS': {
+      exploring: [
+        'Tech/SaaS companies at the Exploring stage typically move fastest due to existing engineering culture and data maturity.',
+        'The average time from assessment to first agentic pilot in tech/SaaS is 3-6 months — roughly half of other industries.',
+        'Tech/SaaS organizations at this stage often overestimate their readiness because technical capability does not equal organizational readiness.',
+      ],
+      experimenting: [
+        'Tech/SaaS companies at the Experimenting stage most commonly deploy agentic AI in customer support and code review workflows.',
+        'Engineering teams in tech/SaaS adopt agentic tools 3x faster than non-technical business units.',
+        'The biggest risk for tech/SaaS companies at this stage is ungoverned agent sprawl — engineers deploying agents without central oversight.',
+      ],
+      operationalizing: [
+        'Tech/SaaS companies at the Operationalizing stage typically have 6-10 agentic systems in production across engineering, support, and sales.',
+        'Peer companies at this maturity level report 25-40% productivity gains in engineering workflows.',
+        'Tech/SaaS organizations at this stage need to formalize governance before scaling further — technical debt in AI governance compounds quickly.',
+      ],
+      transforming: [
+        'Leading tech/SaaS companies are embedding agentic AI into their products as a competitive differentiator.',
+        'At this maturity level, peers are building internal platforms that allow any team to deploy governed agentic workflows.',
+        'Frontier tech/SaaS companies report that agentic AI has reduced time-to-market for new features by 30-50%.',
+      ],
+    },
+    Manufacturing: {
+      exploring: [
+        'Manufacturing organizations at the Exploring stage typically have strong operational data but limited cloud infrastructure for AI workloads.',
+        'The average manufacturing organization needs 9-15 months of infrastructure modernization before agentic pilots are feasible.',
+        'OT/IT convergence is the most common foundational challenge for manufacturing organizations beginning their agentic AI journey.',
+      ],
+      experimenting: [
+        'Manufacturing organizations at the Experimenting stage most commonly pilot agentic AI in supply chain optimization and quality control.',
+        'Predictive maintenance with agentic decision-making is the highest-ROI first use case, with 20-30% reduction in unplanned downtime.',
+        'Manufacturing organizations at this stage need to bridge the gap between operational technology (OT) data and AI-ready cloud infrastructure.',
+      ],
+      operationalizing: [
+        'Manufacturing organizations at the Operationalizing stage report 15-25% improvements in overall equipment effectiveness (OEE).',
+        'Peer organizations at this maturity level have 3-5 agentic systems in production across supply chain, quality, and maintenance.',
+        'Real-time data integration between shop floor systems and agentic AI platforms is the top scaling challenge.',
+      ],
+      transforming: [
+        'Leading manufacturers are deploying autonomous supply chain agents that can reroute, reorder, and renegotiate without human intervention.',
+        'At this maturity level, manufacturing peers report 10-20% total cost reductions across their production operations.',
+        'Frontier manufacturers are building digital twin systems powered by agentic AI for real-time production optimization.',
+      ],
+    },
+    Retail: {
+      exploring: [
+        'Retail organizations at the Exploring stage have rich customer data but typically lack the infrastructure to make it agent-accessible.',
+        'The average retailer needs 6-12 months of data platform modernization before agentic AI deployment.',
+        'Customer data privacy and personalization governance are the primary regulatory considerations for retail agentic AI.',
+      ],
+      experimenting: [
+        'Retail organizations at the Experimenting stage most commonly pilot agentic AI in inventory management and customer service.',
+        'Dynamic pricing with agentic decision-making is the highest-ROI early use case, with average margin improvements of 5-8%.',
+        'Retail organizations at this stage need to ensure AI governance covers customer-facing agent interactions to maintain brand trust.',
+      ],
+      operationalizing: [
+        'Retail organizations at the Operationalizing stage report 20-35% improvements in inventory turnover through agentic optimization.',
+        'Peer retailers at this maturity level have 4-6 agentic systems in production across merchandising, fulfillment, and customer experience.',
+        'Omnichannel integration for agentic systems is the top technical challenge for retailers scaling AI.',
+      ],
+      transforming: [
+        'Leading retailers are deploying autonomous merchandising agents that manage assortment, pricing, and promotion decisions.',
+        'At this maturity level, retail peers report 15-25% improvements in customer lifetime value through agentic personalization.',
+        'Frontier retailers are building multi-agent systems that coordinate real-time across supply chain, store operations, and digital experiences.',
+      ],
+    },
+    Other: {
+      exploring: [
+        'Organizations at the Exploring stage typically need 6-18 months of foundational work before launching their first agentic pilot.',
+        'Cross-industry data shows that executive alignment and data maturity are the two strongest predictors of agentic AI success.',
+        'Organizations at this stage benefit most from a structured readiness assessment that quantifies gaps before any technology investment.',
+      ],
+      experimenting: [
+        'Organizations at the Experimenting stage most commonly pilot agentic AI in operational workflows with high volume and clear success metrics.',
+        'The average organization at this stage invests $1-3M in their first year of agentic infrastructure and pilot development.',
+        'The biggest risk at this stage is declaring victory too early — the gap between a successful pilot and enterprise-scale value is where most organizations stall.',
+      ],
+      operationalizing: [
+        'Organizations at the Operationalizing stage typically see 25-40% efficiency gains in the workflows where agentic AI has been deployed.',
+        'Peer organizations at this maturity level have 3-6 agentic systems in production and are planning enterprise-wide expansion.',
+        'Governance maturity is consistently the primary bottleneck to scaling — not technology or budget.',
+      ],
+      transforming: [
+        'Leading organizations across industries are deploying multi-agent systems that coordinate complex, cross-functional workflows.',
+        'At this maturity level, peers report 5-10x return on their agentic AI investment within the first two years.',
+        'Frontier organizations are using agentic AI to create competitive advantages that are difficult for slower-moving peers to replicate.',
+      ],
+    },
+  };
+
+  // Maturity level descriptions
+  const MATURITY_LEVELS = {
+    exploring: {
+      label: 'Exploring',
+      range: [0, 35],
+      color: '#E53E3E',
+      badgeColor: 'bg-red-500/20 text-red-300',
+      desc: 'Your organization is in the early stages of agentic AI awareness. Interest exists but foundational capabilities — executive sponsorship, data infrastructure, governance — need development before pilot programs are feasible. This is a common starting point for organizations that recognize the opportunity but have not yet invested in readiness.',
+    },
+    experimenting: {
+      label: 'Experimenting',
+      range: [36, 55],
+      color: '#DD6B20',
+      badgeColor: 'bg-orange-500/20 text-orange-300',
+      desc: 'Your organization has foundational elements in place and may be running initial AI experiments. There are meaningful gaps to close, but the trajectory is positive. With targeted investments in the weakest dimensions, you could be pilot-ready within 6-12 months.',
+    },
+    operationalizing: {
+      label: 'Operationalizing',
+      range: [56, 75],
+      color: '#0EA5A0',
+      badgeColor: 'bg-teal/20 text-teal-light',
+      desc: 'Your organization has solid foundations across most dimensions and is well-positioned to move from experimentation to production-grade agentic deployment. The focus should be on closing remaining gaps and designing enterprise architecture that can scale.',
+    },
+    transforming: {
+      label: 'Transforming',
+      range: [76, 100],
+      color: '#38A169',
+      badgeColor: 'bg-green-500/20 text-green-300',
+      desc: 'Your organization has mature capabilities across the board and is ready for enterprise-scale agentic AI deployment. The focus should be on advanced multi-agent orchestration, competitive differentiation, and building the operating model that sustains long-term agentic operations.',
+    },
+  };
+
+  // =========================================================================
+  // State
+  // =========================================================================
+  let currentStep = 1;
+  let currentQuestion = 0;
+  const answers: Record<string, number> = {};
+
+  // =========================================================================
+  // Navigation
+  // =========================================================================
+  function showStep(step: number) {
+    document.querySelectorAll('.step-panel').forEach((el) => {
+      (el as HTMLElement).classList.add('hidden');
+    });
+    const panel = document.getElementById(`step-${step}`);
+    if (panel) {
+      panel.classList.remove('hidden');
+      // Re-trigger animation
+      panel.style.animation = 'none';
+      panel.offsetHeight; // force reflow
+      panel.style.animation = '';
+    }
+
+    // Update progress dots
+    document.querySelectorAll('.step-dot').forEach((dot) => {
+      const dotStep = parseInt((dot as HTMLElement).dataset.step || '0');
+      const circle = dot.querySelector('span:first-child') as HTMLElement;
+      const label = dot.querySelector('span:last-child') as HTMLElement;
+
+      if (dotStep <= step) {
+        circle.className = 'w-8 h-8 rounded-full bg-teal text-pure-white flex items-center justify-center text-xs font-bold';
+        (dot as HTMLElement).className = dot.className.replace(/text-slate/g, 'text-teal');
+        if (!dot.className.includes('text-teal')) {
+          (dot as HTMLElement).classList.add('text-teal');
+        }
+      } else {
+        circle.className = 'w-8 h-8 rounded-full bg-silver-light text-slate flex items-center justify-center text-xs font-bold';
+        (dot as HTMLElement).className = dot.className.replace(/text-teal/g, 'text-slate');
+      }
+    });
+
+    currentStep = step;
+  }
+
+  function renderQuestion(index: number) {
+    const q = QUESTIONS[index];
+    const container = document.getElementById('question-container');
+    if (!container) return;
+
+    const selectedScore = answers[q.id] || 0;
+
+    container.innerHTML = `
+      <div class="mb-6 flex items-center justify-between">
+        <span class="question-counter text-xs font-bold text-teal uppercase tracking-wider">Question ${index + 1} of ${QUESTIONS.length}</span>
+        <span class="text-xs text-slate font-medium">${q.dimension}</span>
+      </div>
+      <h3 class="text-lg font-bold text-navy mb-6">${q.question}</h3>
+      <div class="space-y-3">
+        ${q.options
+          .map(
+            (opt, i) => `
+          <div class="option-card p-4 rounded-lg border border-silver-light ${selectedScore === opt.score ? 'selected' : ''}" data-score="${opt.score}" data-question="${q.id}">
+            <div class="flex items-start gap-3">
+              <div class="option-radio mt-0.5 w-5 h-5 rounded-full border-2 ${selectedScore === opt.score ? 'bg-teal border-teal' : 'border-silver'} flex items-center justify-center flex-shrink-0">
+                ${selectedScore === opt.score ? '<div class="w-2 h-2 rounded-full bg-pure-white"></div>' : ''}
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-navy">${opt.text}</p>
+                <p class="text-xs text-slate mt-1">${opt.desc}</p>
+              </div>
+            </div>
+          </div>
+        `
+          )
+          .join('')}
+      </div>
+    `;
+
+    // Attach click handlers
+    container.querySelectorAll('.option-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        const score = parseInt((card as HTMLElement).dataset.score || '0');
+        const questionId = (card as HTMLElement).dataset.question || '';
+        answers[questionId] = score;
+        renderQuestion(index); // re-render to show selection
+      });
+    });
+
+    // Update nav buttons
+    const prevBtn = document.getElementById('btn-prev-q') as HTMLButtonElement;
+    const nextBtn = document.getElementById('btn-next-q') as HTMLButtonElement;
+
+    if (prevBtn) {
+      prevBtn.style.visibility = index === 0 ? 'hidden' : 'visible';
+    }
+
+    if (nextBtn) {
+      nextBtn.textContent = index === QUESTIONS.length - 1 ? 'See Results' : 'Next \u2192';
+    }
+  }
+
+  // =========================================================================
+  // Score Calculation
+  // =========================================================================
+  function calculateScore(): number {
+    let total = 0;
+    let count = 0;
+    QUESTIONS.forEach((q) => {
+      if (answers[q.id]) {
+        total += answers[q.id];
+        count++;
+      }
+    });
+    if (count === 0) return 0;
+    // Scale from 1-4 range to 0-100
+    const avgScore = total / count; // 1-4
+    return Math.round(((avgScore - 1) / 3) * 100);
+  }
+
+  function getDimensionScore(questionId: string): number {
+    const raw = answers[questionId] || 1;
+    return Math.round(((raw - 1) / 3) * 100);
+  }
+
+  function getMaturityLevel(score: number): string {
+    if (score <= 35) return 'exploring';
+    if (score <= 55) return 'experimenting';
+    if (score <= 75) return 'operationalizing';
+    return 'transforming';
+  }
+
+  // =========================================================================
+  // Radar Chart (inline SVG)
+  // =========================================================================
+  function drawRadarChart(scores: { label: string; value: number }[]) {
+    const svg = document.getElementById('radar-chart');
+    if (!svg) return;
+
+    const cx = 200;
+    const cy = 200;
+    const maxR = 150;
+    const n = scores.length;
+    const angleStep = (2 * Math.PI) / n;
+    const startAngle = -Math.PI / 2; // Start from top
+
+    // Grid levels
+    const levels = [25, 50, 75, 100];
+    let svgContent = '';
+
+    // Background grid
+    levels.forEach((level) => {
+      const r = (level / 100) * maxR;
+      const points = [];
+      for (let i = 0; i < n; i++) {
+        const angle = startAngle + i * angleStep;
+        points.push(`${cx + r * Math.cos(angle)},${cy + r * Math.sin(angle)}`);
+      }
+      svgContent += `<polygon points="${points.join(' ')}" fill="none" stroke="#E2E8F0" stroke-width="1" />`;
+    });
+
+    // Axis lines
+    for (let i = 0; i < n; i++) {
+      const angle = startAngle + i * angleStep;
+      const x = cx + maxR * Math.cos(angle);
+      const y = cy + maxR * Math.sin(angle);
+      svgContent += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#E2E8F0" stroke-width="1" />`;
+    }
+
+    // Data polygon
+    const dataPoints = [];
+    scores.forEach((s, i) => {
+      const angle = startAngle + i * angleStep;
+      const r = (s.value / 100) * maxR;
+      dataPoints.push(`${cx + r * Math.cos(angle)},${cy + r * Math.sin(angle)}`);
+    });
+    svgContent += `<polygon points="${dataPoints.join(' ')}" fill="rgba(14, 165, 160, 0.15)" stroke="#0EA5A0" stroke-width="2.5" />`;
+
+    // Data points (circles)
+    scores.forEach((s, i) => {
+      const angle = startAngle + i * angleStep;
+      const r = (s.value / 100) * maxR;
+      const x = cx + r * Math.cos(angle);
+      const y = cy + r * Math.sin(angle);
+      svgContent += `<circle cx="${x}" cy="${y}" r="4" fill="#0EA5A0" stroke="#fff" stroke-width="2" />`;
+    });
+
+    // Labels
+    scores.forEach((s, i) => {
+      const angle = startAngle + i * angleStep;
+      const labelR = maxR + 28;
+      const x = cx + labelR * Math.cos(angle);
+      const y = cy + labelR * Math.sin(angle);
+      const anchor = Math.abs(Math.cos(angle)) < 0.1 ? 'middle' : Math.cos(angle) > 0 ? 'start' : 'end';
+      const dy = Math.sin(angle) > 0.3 ? '1em' : Math.sin(angle) < -0.3 ? '-0.3em' : '0.35em';
+      svgContent += `<text x="${x}" y="${y}" text-anchor="${anchor}" dy="${dy}" class="text-xs" fill="#4A5568" font-size="11" font-weight="600" font-family="Inter, sans-serif">${s.label}</text>`;
+      svgContent += `<text x="${x}" y="${y}" text-anchor="${anchor}" dy="${parseFloat(dy as string) + 1.2}em" fill="#0EA5A0" font-size="11" font-weight="700" font-family="Inter, sans-serif">${s.value}</text>`;
+    });
+
+    svg.innerHTML = svgContent;
+  }
+
+  // =========================================================================
+  // Results Generation
+  // =========================================================================
+  function generateResults() {
+    const companyName = (document.getElementById('company-name') as HTMLInputElement)?.value || 'Your Company';
+    const industry = (document.getElementById('industry') as HTMLSelectElement)?.value || 'Other';
+    const score = calculateScore();
+    const maturityKey = getMaturityLevel(score);
+    const maturity = MATURITY_LEVELS[maturityKey as keyof typeof MATURITY_LEVELS];
+
+    // Populate score
+    const scoreEl = document.getElementById('results-score');
+    if (scoreEl) scoreEl.textContent = String(score);
+
+    const companyEl = document.getElementById('results-company-name');
+    if (companyEl) companyEl.textContent = companyName;
+
+    // Tier badge
+    const badge = document.getElementById('results-tier-badge');
+    if (badge) {
+      badge.textContent = maturity.label;
+      badge.className = `mt-3 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${maturity.badgeColor}`;
+    }
+
+    // Maturity description
+    const matEl = document.getElementById('results-maturity');
+    if (matEl) matEl.textContent = maturity.label;
+    const matDesc = document.getElementById('results-maturity-desc');
+    if (matDesc) matDesc.textContent = maturity.desc;
+
+    // Radar chart
+    const radarScores = QUESTIONS.map((q) => ({
+      label: q.label,
+      value: getDimensionScore(q.id),
+    }));
+    drawRadarChart(radarScores);
+
+    // Key Insights — pick the 3 weakest dimensions
+    const sortedDimensions = QUESTIONS.map((q) => ({
+      id: q.id,
+      score: answers[q.id] || 1,
+    })).sort((a, b) => a.score - b.score);
+
+    const insightsContainer = document.getElementById('insights-container');
+    if (insightsContainer) {
+      insightsContainer.innerHTML = '';
+      const topInsights = sortedDimensions.slice(0, 3);
+      topInsights.forEach((dim) => {
+        const templates = INSIGHT_TEMPLATES[dim.id as keyof typeof INSIGHT_TEMPLATES];
+        if (!templates) return;
+        const template = templates.find((t) => t.threshold === dim.score) || templates[0];
+        insightsContainer.innerHTML += `
+          <div class="insight-card pl-5 py-4 pr-4 bg-white rounded-r-lg">
+            <h4 class="text-sm font-bold text-navy mb-1">${template.title}</h4>
+            <p class="text-sm text-slate leading-relaxed">${template.text}</p>
+          </div>
+        `;
+      });
+    }
+
+    // Benchmarks
+    const bmKey = industry in INDUSTRY_BENCHMARKS ? industry : 'Other';
+    const bmSet = INDUSTRY_BENCHMARKS[bmKey as keyof typeof INDUSTRY_BENCHMARKS];
+    const bmMaturity = bmSet[maturityKey as keyof typeof bmSet] || bmSet.exploring;
+
+    const bmIntro = document.getElementById('benchmark-intro');
+    if (bmIntro) {
+      bmIntro.textContent = `Companies in ${bmKey === 'Other' ? 'your industry' : bmKey} at the ${maturity.label} stage typically face these benchmarks:`;
+    }
+
+    const bmItems = document.getElementById('benchmark-items');
+    if (bmItems) {
+      bmItems.innerHTML = '';
+      bmMaturity.forEach((bm: string) => {
+        bmItems.innerHTML += `
+          <div class="flex items-start gap-3">
+            <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span>
+            <p class="text-sm text-slate">${bm}</p>
+          </div>
+        `;
+      });
+    }
+  }
+
+  // =========================================================================
+  // Animated score counter
+  // =========================================================================
+  function animateScore(target: number) {
+    const el = document.getElementById('results-score');
+    if (!el) return;
+    let current = 0;
+    const duration = 1500;
+    const start = performance.now();
+
+    function tick(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      current = Math.round(eased * target);
+      el!.textContent = String(current);
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  // =========================================================================
+  // Event Handlers
+  // =========================================================================
+  document.addEventListener('DOMContentLoaded', () => {
+    // Step 1 → Step 2
+    document.getElementById('btn-to-step-2')?.addEventListener('click', () => {
+      // Validate
+      const name = (document.getElementById('company-name') as HTMLInputElement)?.value?.trim();
+      const industry = (document.getElementById('industry') as HTMLSelectElement)?.value;
+      const revenue = (document.getElementById('revenue') as HTMLSelectElement)?.value;
+      const employees = (document.getElementById('employees') as HTMLSelectElement)?.value;
+
+      if (!name || !industry || !revenue || !employees) {
+        // Highlight empty fields
+        ['company-name', 'industry', 'revenue', 'employees'].forEach((id) => {
+          const el = document.getElementById(id) as HTMLInputElement;
+          if (el && !el.value?.trim()) {
+            el.style.borderColor = '#E53E3E';
+            setTimeout(() => (el.style.borderColor = ''), 2000);
+          }
+        });
+        return;
+      }
+
+      currentQuestion = 0;
+      showStep(2);
+      renderQuestion(0);
+    });
+
+    // Question navigation
+    document.getElementById('btn-prev-q')?.addEventListener('click', () => {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        renderQuestion(currentQuestion);
+      } else {
+        showStep(1);
+      }
+    });
+
+    document.getElementById('btn-next-q')?.addEventListener('click', () => {
+      const q = QUESTIONS[currentQuestion];
+      if (!answers[q.id]) {
+        // Flash the options to indicate selection required
+        document.querySelectorAll('.option-card').forEach((card) => {
+          (card as HTMLElement).style.borderColor = '#E53E3E';
+          setTimeout(() => ((card as HTMLElement).style.borderColor = ''), 1500);
+        });
+        return;
+      }
+
+      if (currentQuestion < QUESTIONS.length - 1) {
+        currentQuestion++;
+        renderQuestion(currentQuestion);
+      } else {
+        // Show results
+        showStep(3);
+
+        // Simulate analysis loading
+        const loadingText = document.getElementById('loading-text');
+        const loadingSubtext = document.getElementById('loading-subtext');
+        const loadingPhases = [
+          { text: 'Analyzing your responses...', sub: 'Running diagnostic against CATALYST framework' },
+          { text: 'Scoring dimensions...', sub: 'Calculating AI/ML footprint, data maturity, governance' },
+          { text: 'Generating benchmarks...', sub: 'Comparing against industry peers' },
+          { text: 'Preparing insights...', sub: 'Identifying key gaps and recommendations' },
+        ];
+
+        let phase = 0;
+        const phaseInterval = setInterval(() => {
+          phase++;
+          if (phase < loadingPhases.length) {
+            if (loadingText) loadingText.textContent = loadingPhases[phase].text;
+            if (loadingSubtext) loadingSubtext.textContent = loadingPhases[phase].sub;
+          }
+        }, 700);
+
+        setTimeout(() => {
+          clearInterval(phaseInterval);
+          generateResults();
+          const loading = document.getElementById('results-loading');
+          const content = document.getElementById('results-content');
+          if (loading) loading.classList.add('hidden');
+          if (content) content.classList.remove('hidden');
+
+          // Animate score
+          const score = calculateScore();
+          animateScore(score);
+        }, 3000);
+      }
+    });
+
+    // Step 3 → Step 4
+    document.getElementById('btn-to-step-4')?.addEventListener('click', () => {
+      showStep(4);
+    });
+  });
+</script>

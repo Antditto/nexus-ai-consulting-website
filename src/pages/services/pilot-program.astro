@@ -1,0 +1,39 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+---
+
+<ServicePage
+  name="Pilot Program Design & Execution"
+  tagline="Proof in production. Not in a slide deck."
+  subhead="We design, build, and operate a working agentic system in your environment — then measure what it delivers against your KPIs."
+  duration="16 weeks"
+  priceRange="$750K – $2M"
+  problem="Enterprise AI is stuck in pilot purgatory. Companies run proofs of concept that show promise in isolation but never survive contact with organizational reality — dependencies, handoffs, data quality issues, governance gaps, user resistance. What is needed is not another demo. It is a system running in production against real workflows with measured results."
+  deliverables={[
+    { name: 'Pilot Design Document', description: 'Use case specification, success criteria, scope boundaries, risk register, and rollout plan.' },
+    { name: 'Working Agentic System', description: 'Fully operational agent(s) running in your environment against live data and workflows.' },
+    { name: 'Performance Dashboard', description: 'Real-time monitoring interface tracking all defined KPIs, agent behavior metrics, and system health indicators.' },
+    { name: 'Weekly Status Reports', description: 'Quantified performance updates with trend analysis, issue log, and adjustment recommendations.' },
+    { name: 'Pilot Results Report', description: 'Definitive assessment of pilot outcomes against success criteria, with auditable methodology and data.' },
+    { name: 'Scale-Up Business Case', description: 'ROI model extrapolated from pilot actuals, resource requirements for enterprise rollout, and risk-adjusted investment recommendation.' },
+    { name: 'Knowledge Transfer Package', description: 'Documentation, runbooks, and recorded training sessions enabling your team to operate and extend the pilot system.' },
+  ]}
+  phases={[
+    { name: 'Pilot Scoping', weeks: 'Weeks 1–2', description: 'Use case refinement from Readiness Assessment outputs, success metrics definition (quantitative KPIs + qualitative indicators), scope boundaries and guardrails, stakeholder alignment workshops.' },
+    { name: 'Design & Build', weeks: 'Weeks 3–6', description: 'Agent development and prompt engineering, tool integration and API connectivity, human-in-the-loop workflow design, testing environment configuration, safety and guardrail implementation.' },
+    { name: 'Controlled Launch', weeks: 'Weeks 7–9', description: 'Phased rollout (shadow mode, supervised mode, autonomous mode), real-time monitoring activation, daily stand-ups with client operations team, incident response protocols activation.' },
+    { name: 'Operate & Measure', weeks: 'Weeks 9–14', description: 'Live pilot operation with continuous monitoring, weekly performance reviews against KPIs, issue triage and resolution, iterative improvement cycles, user feedback collection.' },
+    { name: 'Evaluate & Report', weeks: 'Weeks 14–16', description: 'Comprehensive performance analysis, ROI calculation with actuals, risk and incident retrospective, scale-up feasibility assessment, executive decision brief.' },
+  ]}
+  audience={[
+    'VPs of Innovation tired of pilots that never reach production',
+    'Organizations that need evidence — not projections — to justify enterprise-scale AI investment',
+    'Leadership teams that want to see agentic AI working before committing to transformation',
+  ]}
+  pricingNote="Outcome-linked fixed fee with performance bonus. Up to 25% of the base fee is structured as a performance bonus tied to achievement of pre-agreed KPIs. This structure ensures Nexus is invested in pilot success, not just delivery."
+  relatedServices={[
+    { name: 'Agentic Architecture Design', href: '/services/architecture-design', description: 'Design the enterprise-grade architecture before running your pilot.' },
+    { name: 'Transformation Roadmap', href: '/services/transformation-roadmap', description: 'Turn pilot results into a board-ready plan for enterprise-scale rollout.' },
+  ]}
+  ctaText="Book a Readiness Assessment — the first step toward a pilot"
+/>

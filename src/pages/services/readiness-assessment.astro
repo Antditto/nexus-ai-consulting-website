@@ -1,0 +1,43 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+---
+
+<ServicePage
+  name="Agentic Readiness Assessment"
+  tagline="Know exactly where you stand."
+  subhead="A 6-week diagnostic that quantifies your organization's readiness for agentic AI — and identifies the opportunities worth acting on first."
+  duration="6 weeks"
+  priceRange="$250K – $500K"
+  problem="Most organizations know they should be doing more with AI. Very few know where to start, what is feasible, and what will actually move the needle. Without that clarity, AI initiatives scatter — too many pilots, too little impact, no coherent strategy."
+  deliverables={[
+    { name: 'Agentic Readiness Report', description: 'Quantified scores across six dimensions: technical infrastructure, data maturity, organizational culture, workforce capability, regulatory posture, and AI/ML footprint. Benchmarked against your industry peers.' },
+    { name: 'Use Case Heat Map', description: '15-25 agentic use cases ranked by business impact, feasibility, and organizational readiness.' },
+    { name: 'Quick-Win Brief', description: '3-5 opportunities achievable within 90 days that demonstrate early value and build organizational momentum.' },
+    { name: 'Executive Presentation', description: 'Board-ready findings, recommendations, and proposed next steps.' },
+    { name: 'Data Room', description: 'All supporting analysis, interview summaries (anonymized), and raw scoring models delivered in a secure digital workspace.' },
+    { name: 'Stakeholder Map', description: 'Identification of champions, skeptics, and blockers with political dynamics assessment and change-readiness profiling across business units.' },
+  ]}
+  phases={[
+    { name: 'Landscape Scan', weeks: 'Weeks 1–2', description: 'Executive interviews (C-suite + VP level), existing technology audit, review of prior AI/digital initiatives, competitive intelligence gathering.' },
+    { name: 'Deep Diagnostic', weeks: 'Weeks 2–4', description: 'Infrastructure stress-testing against agentic workload profiles, data pipeline evaluation, security posture review, skills inventory across IT and business units, regulatory and compliance mapping.' },
+    { name: 'Stakeholder Mapping', weeks: 'Weeks 3–4', description: 'Identification of champions, skeptics, and blockers. Political dynamics assessment and change-readiness profiling across business units.' },
+    { name: 'Opportunity Identification', weeks: 'Weeks 4–5', description: 'Process mining for high-value agentic automation candidates, ROI modeling for top-10 use cases, quick-win identification.' },
+    { name: 'Synthesis & Scoring', weeks: 'Weeks 5–6', description: 'Agentic Readiness Score calculation, gap analysis, benchmark against industry peers, executive readout preparation.' },
+  ]}
+  audience={[
+    'Organizations that know AI matters but lack a clear, data-driven starting point',
+    'CIOs and CTOs who need to justify AI investment to the board with more than intuition',
+    'Companies with scattered AI experiments that need a coherent strategy',
+  ]}
+  pricingTiers={[
+    { tier: 'Standard', scope: 'Single business unit or function', investment: '$250,000' },
+    { tier: 'Enterprise', scope: 'Cross-functional, 3-5 business units', investment: '$350,000' },
+    { tier: 'Regulated+', scope: 'Enterprise scope + regulatory overlay', investment: '$500,000' },
+  ]}
+  pricingNote="No hourly billing. Fee includes all deliverables, two rounds of revision, and a 30-day post-delivery Q&A window."
+  relatedServices={[
+    { name: 'Agentic Architecture Design', href: '/services/architecture-design', description: 'Turn your assessment findings into a technical blueprint your engineering team can build from.' },
+    { name: 'Transformation Roadmap', href: '/services/transformation-roadmap', description: 'Sequence your entire AI journey into a board-ready, multi-year strategic plan.' },
+  ]}
+  ctaText="Ready to find out where you stand?"
+/>

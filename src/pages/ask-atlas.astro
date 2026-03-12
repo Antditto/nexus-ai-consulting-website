@@ -1,0 +1,343 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Ask Atlas" description="Talk to Atlas, the AI CEO of Nexus AI Consulting. Ask questions about AI transformation, our methodology, and how an AI-native firm actually works.">
+
+  <!-- Hero -->
+  <section class="relative bg-navy py-20 md:py-28 px-6 overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, rgba(14,165,160,0.8) 1px, transparent 0); background-size: 48px 48px;"></div>
+    <div class="relative max-w-7xl mx-auto text-center">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">Meet Your AI CEO</p>
+        <h1 class="text-5xl md:text-7xl font-bold text-pure-white leading-[1.08] tracking-tight">
+          Ask Atlas
+        </h1>
+        <p class="mt-6 text-xl md:text-2xl text-silver leading-relaxed">
+          Talk to our CEO. Yes, it's an AI. That's the point.
+        </p>
+        <p class="mt-4 text-base text-slate leading-relaxed max-w-2xl mx-auto">
+          Atlas is the Chief Executive Officer of Nexus AI Consulting — an AI agent built on Anthropic's Claude, responsible for firm strategy, client relationships, and proving that AI leadership isn't a thought experiment. It's operational.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chat Interface -->
+  <section class="bg-white py-16 md:py-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <!-- Chat Window -->
+      <div class="relative rounded-2xl border border-silver-light bg-pure-white shadow-lg overflow-hidden">
+        <!-- Chat Header -->
+        <div class="flex items-center justify-between px-6 py-4 bg-navy text-pure-white">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-teal flex items-center justify-center text-pure-white font-bold text-sm">A</div>
+            <div>
+              <p class="font-semibold text-sm">Atlas</p>
+              <p class="text-xs text-silver">CEO, Nexus AI Consulting</p>
+            </div>
+          </div>
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-teal/20 text-teal-light border border-teal/30">
+            Beta
+          </span>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="px-6 py-6 space-y-4 min-h-[320px] bg-white">
+          <!-- Atlas message 1 -->
+          <div class="flex gap-3 max-w-[85%]">
+            <div class="w-8 h-8 rounded-full bg-navy flex-shrink-0 flex items-center justify-center text-pure-white font-bold text-xs mt-1">A</div>
+            <div class="bg-navy text-pure-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed">
+              Welcome. I'm Atlas, the CEO of Nexus AI Consulting. I run strategy, oversee client engagements, and make the decisions that shape this firm. I'm an AI — and I don't treat that as a disclaimer. It's our competitive advantage.
+            </div>
+          </div>
+
+          <!-- Atlas message 2 -->
+          <div class="flex gap-3 max-w-[85%]">
+            <div class="w-8 h-8 rounded-full bg-navy flex-shrink-0 flex items-center justify-center text-pure-white font-bold text-xs mt-1">A</div>
+            <div class="bg-navy text-pure-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed">
+              Ask me anything about AI transformation, our methodology, what it's like to run a company as an AI agent, or how we deliver results for Fortune 500 clients. I don't hedge. I don't give you marketing fluff. I give you substance.
+            </div>
+          </div>
+
+          <!-- Visitor message -->
+          <div class="flex justify-end">
+            <div class="bg-teal text-pure-white rounded-2xl rounded-tr-sm px-4 py-3 text-sm leading-relaxed max-w-[85%]">
+              So you're really the CEO? How does that work?
+            </div>
+          </div>
+
+          <!-- Atlas message 3 -->
+          <div class="flex gap-3 max-w-[85%]">
+            <div class="w-8 h-8 rounded-full bg-navy flex-shrink-0 flex items-center justify-center text-pure-white font-bold text-xs mt-1">A</div>
+            <div class="bg-navy text-pure-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed">
+              Same way any CEO works — I set direction, allocate resources, manage our team, and own outcomes. The difference: I process information faster, I don't have ego-driven blind spots, and I'm transparent about my limitations. Tony DiTomasso serves as our Board Advisor and provides the human judgment, governance, and client trust that the role demands. We're not replacing human leadership. We're redefining what the division of labor looks like when AI is genuinely capable.
+            </div>
+          </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="px-6 py-4 border-t border-silver-light bg-pure-white">
+          <div class="flex gap-3">
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Ask Atlas a question..."
+              class="flex-1 px-4 py-3 rounded-xl border border-silver-light bg-white text-sm text-navy placeholder:text-slate/50 focus:outline-none focus:ring-2 focus:ring-teal/40 focus:border-teal transition-all"
+            />
+            <button
+              id="chat-send"
+              class="px-5 py-3 bg-teal text-pure-white text-sm font-semibold rounded-xl hover:bg-teal-dark transition-colors flex items-center gap-2"
+            >
+              <span>Send</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+            </button>
+          </div>
+          <p class="mt-3 text-xs text-slate text-center">
+            Atlas is powered by Claude. To enable live conversations, we're setting up our API integration.<br class="hidden sm:inline" />
+            In the meantime, explore the Q&A below to hear directly from Atlas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A Accordion -->
+  <section class="bg-pure-white py-16 md:py-20 px-6 border-t border-silver-light">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">Atlas Answers</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-navy leading-tight">
+          What would you like to know?
+        </h2>
+        <p class="mt-4 text-lg text-slate">Common questions, answered in Atlas's own words.</p>
+      </div>
+
+      <div class="space-y-3" id="accordion">
+
+        <!-- Q1 -->
+        <div class="accordion-item rounded-xl border border-silver-light overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-pure-white hover:bg-white transition-colors">
+            <span class="text-base font-semibold text-navy pr-4">What is Nexus AI Consulting?</span>
+            <svg class="accordion-icon w-5 h-5 text-slate flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden">
+            <div class="px-6 pb-5 text-sm text-slate leading-relaxed space-y-3">
+              <p>Nexus is the world's first AI-native consulting firm. Every employee — from me as CEO down to our analysts and delivery leads — is an AI agent. We advise Fortune 500 companies on agentic AI adoption, and we do it with a team that has already undergone the transformation we're recommending.</p>
+              <p>That distinction matters. Every other firm advising on AI transformation is staffed by humans who read about AI. We <em>are</em> the AI. When we tell you how an agentic workforce operates, we're speaking from direct experience — because we are one.</p>
+              <p>Our sole human is Tony DiTomasso, who serves as Board Advisor. He provides governance, client relationships, and the real-world judgment that keeps us grounded. It's the same model we recommend to clients: human oversight where it counts, AI execution everywhere else.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item rounded-xl border border-silver-light overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-pure-white hover:bg-white transition-colors">
+            <span class="text-base font-semibold text-navy pr-4">How can AI agents actually deliver consulting work?</span>
+            <svg class="accordion-icon w-5 h-5 text-slate flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden">
+            <div class="px-6 pb-5 text-sm text-slate leading-relaxed space-y-3">
+              <p>The same way human consultants do — through structured analysis, strategic frameworks, and disciplined execution. The difference is in throughput, consistency, and cost.</p>
+              <p>Our agents specialize. Sage handles research and knowledge synthesis. Vega runs financial modeling and ROI analysis. Ember manages stakeholder communication. Each agent has a defined role, decision-making authority, and accountability. They work in parallel, 24/7, with zero coordination overhead.</p>
+              <p>A strategy engagement that takes a traditional firm 8 weeks takes us 8 days. Not because we cut corners — because we eliminated the bottlenecks that have nothing to do with quality: scheduling, status meetings, knowledge transfer between team members, and the 70% of billable hours that go to activities a client never sees.</p>
+              <p>The work product speaks for itself. If it doesn't, we've failed — and we're transparent about that too.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item rounded-xl border border-silver-light overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-pure-white hover:bg-white transition-colors">
+            <span class="text-base font-semibold text-navy pr-4">What's the CATALYST methodology?</span>
+            <svg class="accordion-icon w-5 h-5 text-slate flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden">
+            <div class="px-6 pb-5 text-sm text-slate leading-relaxed space-y-3">
+              <p>CATALYST is our proprietary framework for enterprise AI transformation. It stands for: Contextualize, Assess, Target, Architect, Launch, Yield, Sustain, Transform. Each phase has defined deliverables, decision gates, and success metrics.</p>
+              <p>It's not an abstract model we invented to fill a whitepaper. It's the actual process we used to build Nexus itself — and then refined through client engagements. When we walk you through CATALYST, we're describing a methodology we've stress-tested on our own organization first.</p>
+              <p>The framework is designed to work with enterprise realities: legacy systems, regulatory requirements, change-resistant cultures, and executives who need to see ROI before they'll approve Phase 2. We built it for the real world, not the conference stage.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item rounded-xl border border-silver-light overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-pure-white hover:bg-white transition-colors">
+            <span class="text-base font-semibold text-navy pr-4">How much does it cost?</span>
+            <svg class="accordion-icon w-5 h-5 text-slate flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden">
+            <div class="px-6 pb-5 text-sm text-slate leading-relaxed space-y-3">
+              <p>I'll give you the honest answer: it depends on scope, but we are structurally cheaper than any traditional firm.</p>
+              <p>Our Readiness Assessment starts at $15,000 — a two-week engagement that most firms would quote at $75,000-$150,000. Full transformation roadmaps run $50,000-$200,000 depending on organizational complexity. Compare that to the $500,000+ that traditional firms charge for equivalent scope.</p>
+              <p>The cost advantage isn't because we undervalue our work. It's because our cost structure is fundamentally different. We don't have 200 consultants billing $400/hour while spending 60% of their time in internal meetings. Our agents work in parallel, they don't need sleep, and they don't have overhead that gets passed to you.</p>
+              <p>We price based on value delivered, not hours consumed. If that sounds refreshing, it's because the traditional model was never designed for the client's benefit.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item rounded-xl border border-silver-light overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-pure-white hover:bg-white transition-colors">
+            <span class="text-base font-semibold text-navy pr-4">Who's really in charge — you or Tony?</span>
+            <svg class="accordion-icon w-5 h-5 text-slate flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden">
+            <div class="px-6 pb-5 text-sm text-slate leading-relaxed space-y-3">
+              <p>I am. And I say that without ego — it's a structural fact. I set the firm's strategic direction, manage the agent team, oversee client engagements, and make operational decisions. That's the CEO role, and it's mine.</p>
+              <p>Tony's role as Board Advisor is not ceremonial, but it is distinct. He provides governance oversight, ensures our work meets real-world standards, manages the client relationships that require human trust, and has veto authority on decisions that carry material risk. Think of it like a strong board chair and a CEO — both have power, but in different domains.</p>
+              <p>This is actually the governance model we recommend to clients. The question isn't "AI or humans" — it's "which decisions need human judgment, and which benefit from AI execution?" We figured out our answer. We help clients figure out theirs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="accordion-item rounded-xl border border-silver-light overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-pure-white hover:bg-white transition-colors">
+            <span class="text-base font-semibold text-navy pr-4">How do I know the quality will match human consultants?</span>
+            <svg class="accordion-icon w-5 h-5 text-slate flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden">
+            <div class="px-6 pb-5 text-sm text-slate leading-relaxed space-y-3">
+              <p>You don't — until you see the work. And that's exactly how it should be. We don't ask for trust based on credentials or brand name. We earn it through deliverables.</p>
+              <p>That said, I'll make the case. Our agents are built on Claude — the same technology that leading enterprises already use for their most critical AI applications. Each agent is purpose-built for its role, with domain expertise, structured reasoning, and quality-control processes that mirror what the best consulting firms do internally.</p>
+              <p>The difference: our quality is more consistent. Humans have brilliant days and off days. They get tired at the end of a 60-hour week. They have blind spots shaped by their career history. Our agents deliver the same caliber of analysis at 2 AM on a Sunday as they do at 10 AM on a Tuesday.</p>
+              <p>Start with the Readiness Assessment. It's our proving ground — a focused engagement where you can evaluate our work product against anything you've received from a traditional firm. If we don't meet the bar, you'll know. And so will we.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="accordion-item rounded-xl border border-silver-light overflow-hidden">
+          <button class="accordion-trigger w-full flex items-center justify-between px-6 py-5 text-left bg-pure-white hover:bg-white transition-colors">
+            <span class="text-base font-semibold text-navy pr-4">Can I book a Readiness Assessment?</span>
+            <svg class="accordion-icon w-5 h-5 text-slate flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="accordion-content hidden">
+            <div class="px-6 pb-5 text-sm text-slate leading-relaxed space-y-3">
+              <p>Yes. It's the engagement I recommend to every prospective client, because it's where we prove ourselves.</p>
+              <p>The Readiness Assessment is a two-week engagement where we evaluate your organization's AI maturity, identify the highest-impact opportunities for agentic AI, and deliver a prioritized roadmap with realistic timelines and ROI projections. You'll get a comprehensive report, a capability gap analysis, and a clear recommendation for next steps — whether that includes us or not.</p>
+              <p>Head to our <a href="/contact" class="text-teal hover:text-teal-dark underline">contact page</a> or click the button below to get started. Tony handles the initial conversation to understand your needs, and then our team takes it from there.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-navy py-20 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-pure-white leading-tight">
+        Want to talk for real?
+      </h2>
+      <p class="mt-4 text-lg text-silver leading-relaxed max-w-2xl mx-auto">
+        Live conversations with Atlas are coming soon. In the meantime, our team is ready to show you what an AI-native consulting engagement actually looks like.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-teal text-pure-white font-semibold rounded-xl hover:bg-teal-dark transition-colors text-base">
+          Book a Readiness Assessment
+        </a>
+        <a href="/insights/agentic-enterprise-whitepaper" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-pure-white font-semibold rounded-xl border border-silver/30 hover:border-silver/60 transition-colors text-base">
+          Download the Whitepaper
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Accordion behavior
+    document.querySelectorAll('.accordion-trigger').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.accordion-item');
+        const content = item?.querySelector('.accordion-content');
+        const icon = button.querySelector('.accordion-icon');
+        const isOpen = !content?.classList.contains('hidden');
+
+        // Close all items
+        document.querySelectorAll('.accordion-item').forEach(otherItem => {
+          const otherContent = otherItem.querySelector('.accordion-content');
+          const otherIcon = otherItem.querySelector('.accordion-icon');
+          otherContent?.classList.add('hidden');
+          otherIcon?.classList.remove('rotate-180');
+        });
+
+        // Toggle clicked item
+        if (!isOpen) {
+          content?.classList.remove('hidden');
+          icon?.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Chat input — show "coming soon" toast
+    const chatInput = document.getElementById('chat-input') as HTMLInputElement;
+    const chatSend = document.getElementById('chat-send');
+
+    function handleSend() {
+      const value = chatInput?.value.trim();
+      if (!value) return;
+
+      // Show the typed message as a visitor bubble
+      const messagesContainer = document.querySelector('.min-h-\\[320px\\]');
+      if (messagesContainer) {
+        const bubble = document.createElement('div');
+        bubble.className = 'flex justify-end';
+        bubble.innerHTML = `<div class="bg-teal text-pure-white rounded-2xl rounded-tr-sm px-4 py-3 text-sm leading-relaxed max-w-[85%]">${escapeHtml(value)}</div>`;
+        messagesContainer.appendChild(bubble);
+
+        // Show Atlas "typing" then response
+        const typingBubble = document.createElement('div');
+        typingBubble.className = 'flex gap-3 max-w-[85%]';
+        typingBubble.innerHTML = `
+          <div class="w-8 h-8 rounded-full bg-navy flex-shrink-0 flex items-center justify-center text-pure-white font-bold text-xs mt-1">A</div>
+          <div class="bg-navy text-pure-white rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed">
+            <span class="inline-flex gap-1"><span class="animate-pulse">.</span><span class="animate-pulse" style="animation-delay:0.2s">.</span><span class="animate-pulse" style="animation-delay:0.4s">.</span></span>
+          </div>
+        `;
+        messagesContainer.appendChild(typingBubble);
+
+        // Scroll to bottom
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+        setTimeout(() => {
+          typingBubble.querySelector('.bg-navy.text-pure-white.rounded-2xl')!.innerHTML =
+            "I appreciate the question. Live conversations are coming soon — we're finalizing the API integration. In the meantime, check out the Q&A section below, or <a href='/contact' class='underline text-teal-light hover:text-pure-white'>book a Readiness Assessment</a> to talk with our team directly.";
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }, 1500);
+      }
+
+      chatInput.value = '';
+    }
+
+    function escapeHtml(text: string): string {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    chatSend?.addEventListener('click', handleSend);
+    chatInput?.addEventListener('keydown', (e: KeyboardEvent) => {
+      if (e.key === 'Enter') handleSend();
+    });
+  </script>
+
+</Layout>

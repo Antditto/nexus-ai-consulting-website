@@ -1,0 +1,238 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home" description="Nexus is the world's first AI-native consulting firm. Every employee is an AI agent. We advise Fortune 500 companies on agentic AI adoption.">
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center bg-navy overflow-hidden">
+    <!-- Subtle geometric accent -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, rgba(14,165,160,0.8) 1px, transparent 0); background-size: 48px 48px;"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-full opacity-5">
+      <div class="absolute top-1/4 right-1/4 w-96 h-96 border border-teal rounded-full"></div>
+      <div class="absolute top-1/3 right-1/6 w-64 h-64 border border-teal-light rounded-full"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-6 py-20">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl md:text-7xl font-bold text-pure-white leading-[1.08] tracking-tight">
+          The consulting firm that runs on what it sells.
+        </h1>
+        <p class="mt-8 text-lg md:text-xl text-silver leading-relaxed max-w-3xl">
+          Nexus is the world's first AI-native consulting firm. Every employee is an AI agent. We advise Fortune 500 companies on agentic AI adoption — strategy, architecture, governance, execution. Our existence is our strongest argument.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+          <a href="/contact" class="inline-flex items-center px-8 py-4 bg-teal text-pure-white font-semibold rounded-lg hover:bg-teal-dark transition-colors text-base">
+            Book a Readiness Assessment
+          </a>
+          <a href="/insights" class="inline-flex items-center text-silver hover:text-pure-white font-medium transition-colors text-base group">
+            Download: The Agentic Enterprise
+            <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thesis Statement -->
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-2xl md:text-3xl lg:text-4xl font-bold text-navy leading-snug">
+        Every consulting firm will tell you they can help with AI. We are the only one that can show you.
+      </p>
+      <p class="mt-8 text-lg text-slate leading-relaxed max-w-3xl mx-auto">
+        Our CEO is an AI agent. Our strategists, analysts, and delivery leads are AI agents. We do not theorize about AI-native organizations. We are one.
+      </p>
+    </div>
+  </section>
+
+  <!-- Proof Points -->
+  <section class="bg-pure-white py-20 px-6 border-t border-b border-silver-light">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div class="text-center">
+          <p class="text-5xl md:text-6xl font-bold text-teal">9</p>
+          <p class="mt-3 text-sm md:text-base text-slate font-medium">AI agents on every engagement</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl md:text-6xl font-bold text-teal">8 <span class="text-3xl md:text-4xl">days</span></p>
+          <p class="mt-3 text-sm md:text-base text-slate font-medium">What takes traditional firms 8 weeks</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl md:text-6xl font-bold text-teal">5</p>
+          <p class="mt-3 text-sm md:text-base text-slate font-medium">Fortune 500 verticals served</p>
+        </div>
+        <div class="text-center">
+          <p class="text-5xl md:text-6xl font-bold text-teal">$75K</p>
+          <p class="mt-3 text-sm md:text-base text-slate font-medium">Starting engagement price</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="bg-navy py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-pure-white leading-tight">
+          Every firm advises on AI. None of them run on it.
+        </h2>
+        <p class="mt-8 text-lg text-silver leading-relaxed">
+          The consultancies telling you how to adopt agentic AI still run their own operations on armies of junior analysts billing $500 an hour for PowerPoint. Their AI practices are bolt-ons. Their recommendations are untested on themselves. The gap between what they sell and how they operate has never been wider.
+        </p>
+        <p class="mt-6 text-lg text-pure-white font-medium">
+          We closed that gap by building a firm the other way around.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="bg-white py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-14">What we deliver.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group p-8 bg-pure-white rounded-xl border border-silver-light hover:border-teal/30 hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-navy mb-4">Agentic Readiness Assessment</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            Know exactly where you stand. A 6-week diagnostic that quantifies your organization's readiness for agentic AI across six dimensions — and identifies the highest-value opportunities to act on first.
+          </p>
+          <a href="/services/readiness-assessment" class="inline-flex items-center mt-6 text-teal font-medium text-sm hover:text-teal-dark transition-colors group/link">
+            Learn more
+            <svg class="ml-1.5 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="group p-8 bg-pure-white rounded-xl border border-silver-light hover:border-teal/30 hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-navy mb-4">Agentic Architecture Design</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            The blueprint before the build. End-to-end technical architecture for deploying agentic AI at enterprise scale — agent topology, model strategy, integration patterns, security, governance.
+          </p>
+          <a href="/services/architecture-design" class="inline-flex items-center mt-6 text-teal font-medium text-sm hover:text-teal-dark transition-colors group/link">
+            Learn more
+            <svg class="ml-1.5 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="group p-8 bg-pure-white rounded-xl border border-silver-light hover:border-teal/30 hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-navy mb-4">Pilot Program Design & Execution</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            Proof in production, not in a slide deck. We design, build, and operate a working agentic system in your environment — then measure what it delivers against real KPIs.
+          </p>
+          <a href="/services/pilot-program" class="inline-flex items-center mt-6 text-teal font-medium text-sm hover:text-teal-dark transition-colors group/link">
+            Learn more
+            <svg class="ml-1.5 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="group p-8 bg-pure-white rounded-xl border border-silver-light hover:border-teal/30 hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-navy mb-4">AI Governance & Risk Framework</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            Deploy with confidence in regulated environments. Comprehensive governance covering risk management, compliance mapping, oversight mechanisms, and board-level reporting — built specifically for agentic systems.
+          </p>
+          <a href="/services/governance-framework" class="inline-flex items-center mt-6 text-teal font-medium text-sm hover:text-teal-dark transition-colors group/link">
+            Learn more
+            <svg class="ml-1.5 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+        <div class="group p-8 bg-pure-white rounded-xl border border-silver-light hover:border-teal/30 hover:shadow-lg transition-all">
+          <h3 class="text-xl font-bold text-navy mb-4">Transformation Roadmap</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            The plan that gets funded. A board-ready, multi-year strategy that sequences your organization's journey from current state to full agentic AI integration — with investment cases, workforce planning, and quarterly milestones.
+          </p>
+          <a href="/services/transformation-roadmap" class="inline-flex items-center mt-6 text-teal font-medium text-sm hover:text-teal-dark transition-colors group/link">
+            Learn more
+            <svg class="ml-1.5 w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="bg-pure-white py-20 px-6 border-t border-silver-light">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-navy mb-14 text-center">How we work.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+        <!-- Step 1 -->
+        <div class="relative text-center md:text-left">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal/10 text-teal font-bold text-lg mb-6">1</div>
+          <h3 class="text-xl font-bold text-navy mb-3">Book an Assessment</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            A 30-minute discovery call with Tony DiTomasso, our Board Advisor. No pitch deck. We listen, ask hard questions, and determine if there is a fit.
+          </p>
+          <!-- Connector arrow (hidden on mobile) -->
+          <div class="hidden md:block absolute top-6 left-full w-full h-px">
+            <div class="absolute top-0 left-4 right-4 flex items-center">
+              <div class="flex-1 h-px bg-silver"></div>
+              <svg class="w-4 h-4 text-silver -ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6l6 6-6 6V6z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="relative text-center md:text-left">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal/10 text-teal font-bold text-lg mb-6">2</div>
+          <h3 class="text-xl font-bold text-navy mb-3">Get Your Roadmap</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            Our AI team executes a diagnostic tailored to your organization. You receive a quantified assessment, a prioritized opportunity map, and a clear path forward.
+          </p>
+          <!-- Connector arrow (hidden on mobile) -->
+          <div class="hidden md:block absolute top-6 left-full w-full h-px">
+            <div class="absolute top-0 left-4 right-4 flex items-center">
+              <div class="flex-1 h-px bg-silver"></div>
+              <svg class="w-4 h-4 text-silver -ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M10 6l6 6-6 6V6z"/></svg>
+            </div>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="text-center md:text-left">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal/10 text-teal font-bold text-lg mb-6">3</div>
+          <h3 class="text-xl font-bold text-navy mb-3">Deploy with Confidence</h3>
+          <p class="text-slate leading-relaxed text-[15px]">
+            From architecture to pilot to enterprise scale — we deliver at the speed of AI with the rigor of a top-tier firm.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Teaser -->
+  <section class="bg-navy-dark py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-teal uppercase tracking-wider mb-4">Case Study</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-pure-white leading-tight">
+          How an AI-native firm built itself from scratch.
+        </h2>
+        <p class="mt-6 text-lg text-silver leading-relaxed">
+          Nexus went from concept to fully operational consulting firm in under one week. Nine AI agents. Five service lines. A proprietary methodology. Enterprise-grade deliverables. The same timeline would take a traditional firm 6 to 12 months.
+        </p>
+        <p class="mt-4 text-lg text-silver leading-relaxed">
+          This is not a thought experiment. It is our operating history.
+        </p>
+        <a href="/insights" class="inline-flex items-center mt-8 text-teal font-semibold hover:text-teal-light transition-colors group">
+          Read the full case study
+          <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Band -->
+  <section class="bg-teal py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-pure-white leading-tight">
+        Ready to see what agentic AI can do for your organization?
+      </h2>
+      <p class="mt-6 text-lg text-pure-white/85 leading-relaxed max-w-2xl mx-auto">
+        Start with a conversation. The Readiness Assessment gives you a clear, quantified picture of where you stand and where the value is — in 6 weeks.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5">
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-pure-white text-teal-dark font-semibold rounded-lg hover:bg-white transition-colors text-base">
+          Book Your Readiness Assessment
+        </a>
+        <a href="/insights" class="inline-flex items-center text-pure-white/85 hover:text-pure-white font-medium transition-colors text-base group">
+          Or download the whitepaper first
+          <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>

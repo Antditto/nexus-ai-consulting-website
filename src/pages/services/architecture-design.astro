@@ -1,0 +1,40 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+---
+
+<ServicePage
+  name="Agentic Architecture Design"
+  tagline="The blueprint before the build."
+  subhead="End-to-end architecture for deploying agentic AI at enterprise scale. Not a conceptual diagram — a specification your engineering team can build from."
+  duration="10 weeks"
+  priceRange="$500K – $1.2M"
+  problem="The wrong AI architecture costs years and tens of millions to unwind. Agent sprawl — uncoordinated agent deployments with no shared infrastructure, no governance layer, no integration strategy — is already emerging in enterprises that moved fast without planning. Architecture is the difference between scaling and chaos."
+  deliverables={[
+    { name: 'Target-State Architecture Document', description: 'Comprehensive technical specification (80-120 pages) with system diagrams, data flows, component specifications, and decision rationale.' },
+    { name: 'Model Strategy Brief', description: 'LLM selection recommendations with evaluation criteria, cost projections, and vendor diversification plan.' },
+    { name: 'Agent Topology Blueprint', description: 'Detailed design of agent roles, orchestration patterns, tool registries, and human-in-the-loop control flows.' },
+    { name: 'Security Architecture Package', description: 'Threat model, control plane design, guardrail specifications, and compliance mapping.' },
+    { name: 'Infrastructure Cost Model', description: '3-year total cost of ownership projection across development, staging, and production environments at projected scale.' },
+    { name: 'Implementation Sequencing Plan', description: 'Phased build-out roadmap with dependency mapping and critical-path analysis.' },
+  ]}
+  phases={[
+    { name: 'Requirements Engineering', weeks: 'Weeks 1–3', description: 'Business capability mapping to agentic patterns, non-functional requirements gathering (latency, throughput, compliance), integration inventory of existing enterprise systems.' },
+    { name: 'Model Strategy', weeks: 'Weeks 2–4', description: 'LLM selection and evaluation (proprietary, open-weight, fine-tuned), model routing and fallback design, cost modeling per workload class, vendor risk assessment.' },
+    { name: 'Agent Topology Design', weeks: 'Weeks 3–6', description: 'Agent role decomposition, multi-agent orchestration patterns, tool-use framework, memory architecture (short-term, long-term, shared), human escalation workflows.' },
+    { name: 'Integration Architecture', weeks: 'Weeks 4–7', description: 'Enterprise system connectivity (ERP, CRM, data lake, ITSM), API gateway design, event-driven integration patterns, data flow mapping.' },
+    { name: 'Security & Control Plane', weeks: 'Weeks 5–8', description: 'Zero-trust agent identity model, secrets management, output filtering and guardrails, audit logging architecture, role-based access control for agent capabilities.' },
+    { name: 'Infrastructure Blueprint', weeks: 'Weeks 6–9', description: 'Compute sizing and GPU allocation strategy, auto-scaling design, multi-region deployment patterns, disaster recovery, cost projections at scale.' },
+    { name: 'Validation & Review', weeks: 'Weeks 8–10', description: 'Architecture review board sessions, threat modeling, performance simulation, stakeholder sign-off.' },
+  ]}
+  audience={[
+    'CTOs who need a defensible technical plan before committing millions to implementation',
+    'Organizations with AI pilots that need an enterprise-grade foundation to scale on',
+    'Technology teams building agentic capabilities who need architecture guidance from a firm that has built and operates one',
+  ]}
+  pricingNote="Milestone-based fixed fee. Payments tied to milestone deliverables: 30% at requirements sign-off, 40% at architecture draft review, 30% at final delivery and acceptance. Includes architecture office hours for 60 days post-delivery."
+  relatedServices={[
+    { name: 'Agentic Readiness Assessment', href: '/services/readiness-assessment', description: 'Start with a clear picture of where you stand before designing the architecture.' },
+    { name: 'Pilot Program Design & Execution', href: '/services/pilot-program', description: 'Put your architecture to the test with a production pilot that proves value.' },
+  ]}
+  ctaText="Start with a conversation"
+/>

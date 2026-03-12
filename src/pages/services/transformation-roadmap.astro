@@ -1,0 +1,41 @@
+---
+import ServicePage from '../../components/ServicePage.astro';
+---
+
+<ServicePage
+  name="Transformation Roadmap"
+  tagline="The plan that gets funded."
+  subhead="A board-ready, multi-year strategy that sequences your organization's journey from current state to AI-native operations — with the investment case to back it up."
+  duration="12 weeks"
+  priceRange="$600K – $1.5M"
+  problem="AI strategies fail at the board table, not in the lab. The roadmap that gets approved is the one that connects technology ambition to financial returns, workforce reality, and governance requirements in a single, coherent document. Most AI strategies are technology wishlists. This is a business plan."
+  deliverables={[
+    { name: 'Transformation Roadmap', description: '60-100 page strategic document: vision, target operating model, sequenced initiatives, investment requirements, and success metrics across a 12-36 month horizon.' },
+    { name: 'Executive Summary & Board Deck', description: '20-25 slide investment decision package distilling the roadmap into a board-ready format.' },
+    { name: 'Initiative Portfolio', description: 'Detailed charters for each transformation initiative with scope, outcomes, resources, and dependencies.' },
+    { name: 'Investment Case', description: 'Full financial model with ROI, NPV, IRR, payback period, and sensitivity analysis across three scenarios.' },
+    { name: 'Workforce Transformation Plan', description: 'Skills gap analysis, reskilling program design, new role specifications, hiring plan, and organizational structure evolution path.' },
+    { name: 'Change Management Playbook', description: 'Stakeholder map, communication strategy, resistance mitigation tactics, executive sponsorship model, and adoption measurement framework.' },
+    { name: '90-Day Quick-Start Plan', description: 'Detailed execution plan for the first wave of initiatives, designed to generate visible momentum and early wins.' },
+  ]}
+  phases={[
+    { name: 'Vision & Ambition Setting', weeks: 'Weeks 1–3', description: 'Executive alignment workshops, target operating model definition, competitive positioning analysis, art-of-the-possible demonstrations, ambition-level calibration with board.' },
+    { name: 'Current State Synthesis', weeks: 'Weeks 2–4', description: 'Integration of Readiness Assessment findings (or accelerated assessment if not completed), technology landscape consolidation, organizational capability baseline, financial baseline establishment.' },
+    { name: 'Initiative Design', weeks: 'Weeks 4–7', description: 'Identification and design of 15-30 transformation initiatives across technology, process, people, and governance; initiative charters with scope, outcomes, dependencies, and resource requirements.' },
+    { name: 'Sequencing & Dependencies', weeks: 'Weeks 6–8', description: 'Critical path analysis, dependency mapping, resource leveling, risk-adjusted scheduling, quick-win identification within first 90 days, wave planning across 12-36 month horizon.' },
+    { name: 'Investment Case Development', weeks: 'Weeks 7–9', description: 'Initiative-level ROI modeling, portfolio-level NPV and IRR analysis, sensitivity analysis across adoption scenarios (conservative, base, aggressive), funding model design.' },
+    { name: 'Workforce & Change Strategy', weeks: 'Weeks 8–10', description: 'Skills gap analysis and reskilling roadmap, new role definition (agent supervisors, prompt engineers, AI product managers), change management strategy, communication plan, organizational resistance mitigation.' },
+    { name: 'Roadmap Finalization', weeks: 'Weeks 10–12', description: 'Executive review and calibration, board presentation development, implementation governance design, first-wave detailed planning, success metrics and stage-gate criteria.' },
+  ]}
+  audience={[
+    'CEOs and CIOs who need board approval for multi-year AI investment',
+    'Organizations that have completed assessments and pilots and need the enterprise-scale plan',
+    'Strategy teams building the case for fundamental operating model change',
+  ]}
+  pricingNote="Fixed fee with value-share option. For clients who proceed to implementation, Nexus offers a value-share structure: a reduced base fee (up to 30% discount) in exchange for a share of documented value created during the first 24 months of roadmap execution. This aligns Nexus with long-term transformation success, not just plan delivery."
+  relatedServices={[
+    { name: 'Agentic Readiness Assessment', href: '/services/readiness-assessment', description: 'The foundation for your roadmap — a quantified picture of where you stand today.' },
+    { name: 'AI Governance & Risk Framework', href: '/services/governance-framework', description: 'Ensure your transformation plan includes the governance needed to scale responsibly.' },
+  ]}
+  ctaText="Start with a Readiness Assessment — the foundation for your roadmap"
+/>
