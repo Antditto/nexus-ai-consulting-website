@@ -103,7 +103,7 @@ const submitted = Astro.url.searchParams.get('submitted') === 'true';
                 </a>
               </div>
             ) : (
-              <form action="https://formspree.io/f/xpqydeoj" method="POST" class="space-y-5">
+              <form action={`https://formspree.io/f/${import.meta.env.PUBLIC_FORMSPREE_ID}`} method="POST" class="space-y-5">
                 <input type="text" name="_gotcha" style="display:none" />
                 <input type="hidden" name="_subject" value="Whitepaper Download Request" />
 
