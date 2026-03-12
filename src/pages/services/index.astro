@@ -77,7 +77,7 @@ const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Road
               </div>
             </div>
             {index < journeySteps.length - 1 && (
-              <svg class="hidden md:block w-6 h-6 text-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="hidden md:block w-6 h-6 text-teal flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             )}
@@ -102,13 +102,13 @@ const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Road
                 <p class="text-slate leading-relaxed mb-6">{service.description}</p>
                 <div class="flex flex-wrap gap-4 text-sm mb-6">
                   <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="text-slate">{service.duration}</span>
                   </div>
                   <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span class="text-slate">{service.priceRange}</span>
@@ -116,7 +116,7 @@ const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Road
                 </div>
                 <a href={service.href} class="inline-flex items-center gap-2 text-teal font-semibold hover:text-teal-dark transition-colors">
                   Learn more
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -126,7 +126,7 @@ const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Road
                 <ul class="space-y-2">
                   {service.deliverables.map((deliverable) => (
                     <li class="flex gap-2 text-sm text-slate">
-                      <svg class="w-4 h-4 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-4 h-4 text-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                       {deliverable}
@@ -147,6 +147,7 @@ const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Road
       <div class="max-w-3xl">
         <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">We never bill by the hour.</h2>
         <p class="text-lg text-slate leading-relaxed">Hourly billing rewards slowness. It incentivizes large teams and long timelines. Our cost structure is fundamentally different — no salaries, no offices, no utilization math. We price relative to the business impact we create, and we make the total cost transparent before we start.</p>
+        <p class="mt-4 text-lg text-slate leading-relaxed">Scoped engagements start at $75K. Full service engagements range from $250K to $2M depending on scope and complexity.</p>
       </div>
     </div>
   </section>
@@ -164,19 +165,19 @@ const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Road
           <p class="text-slate mb-6">Assessment + Governance + Roadmap. The strategic foundation before any technology decisions.</p>
           <div class="space-y-3 mb-8">
             <div class="flex items-center gap-2 text-sm text-slate">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               Agentic Readiness Assessment
             </div>
             <div class="flex items-center gap-2 text-sm text-slate">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               AI Governance & Risk Framework
             </div>
             <div class="flex items-center gap-2 text-sm text-slate">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               Transformation Roadmap
@@ -194,31 +195,31 @@ const journeySteps = ['Assessment', 'Architecture', 'Pilot', 'Governance', 'Road
           <p class="text-silver mb-6">All five services, sequenced and integrated. Each builds on the outputs of the prior, eliminating redundant discovery.</p>
           <div class="space-y-3 mb-8">
             <div class="flex items-center gap-2 text-sm text-silver">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               Agentic Readiness Assessment
             </div>
             <div class="flex items-center gap-2 text-sm text-silver">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               Agentic Architecture Design
             </div>
             <div class="flex items-center gap-2 text-sm text-silver">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               Pilot Program Design & Execution
             </div>
             <div class="flex items-center gap-2 text-sm text-silver">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               AI Governance & Risk Framework
             </div>
             <div class="flex items-center gap-2 text-sm text-silver">
-              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
               Transformation Roadmap
