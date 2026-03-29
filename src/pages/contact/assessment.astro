@@ -101,7 +101,7 @@ const submitted = Astro.url.searchParams.get('submitted') === 'true';
     <div class="max-w-2xl mx-auto px-6">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-pure-white tracking-tight mb-4">Book your assessment</h2>
-        <p class="text-silver text-lg">Fill out the form below. Tony will be in touch within 24 hours.</p>
+        <p class="text-silver text-lg">Fill out the form below. Our team will be in touch within 24 hours.</p>
       </div>
 
       {submitted ? (
@@ -111,7 +111,7 @@ const submitted = Astro.url.searchParams.get('submitted') === 'true';
           </div>
           <h3 class="text-2xl font-bold text-pure-white mb-3">Thank you.</h3>
           <p class="text-silver leading-relaxed max-w-md mx-auto">
-            Your request has been received. Tony will be in touch within 24 hours to schedule a conversation.
+            Your request has been received. Our team will be in touch within 24 hours to schedule a conversation.
           </p>
         </div>
       ) : (
@@ -180,10 +180,10 @@ const submitted = Astro.url.searchParams.get('submitted') === 'true';
         if (response.ok) {
           window.location.href = '/contact/assessment/?submitted=true#book';
         } else {
-          alert('Something went wrong. Please try again or email tony@nexusaiconsulting.com directly.');
+          alert('Something went wrong. Please try again or email contact@nexusaiconsulting.com directly.');
         }
       } catch {
-        alert('Something went wrong. Please try again or email tony@nexusaiconsulting.com directly.');
+        alert('Something went wrong. Please try again or email contact@nexusaiconsulting.com directly.');
       }
     });
   }
