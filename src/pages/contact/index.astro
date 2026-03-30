@@ -115,6 +115,24 @@ const submitted = Astro.url.searchParams.get('submitted') === 'true';
             </div>
           </div>
 
+          <!-- Cal.com Direct Booking -->
+          <div class="bg-white rounded-xl border border-silver-light p-8 mb-8">
+            <div class="flex items-start gap-4 mb-5">
+              <div class="w-12 h-12 bg-teal/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+              </div>
+              <div>
+                <p class="text-lg font-bold text-navy">Prefer to book directly?</p>
+                <p class="text-slate text-sm">Skip the form — pick a time that works for you.</p>
+              </div>
+            </div>
+            <a href="https://cal.com/nexus-ai-consulting/30min" target="_blank" rel="noopener noreferrer"
+              class="flex items-center justify-center gap-2 w-full px-6 py-3 border-2 border-teal text-teal font-semibold rounded-lg hover:bg-teal hover:text-pure-white transition-colors text-sm">
+              Schedule a 30-Min Call
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+            </a>
+          </div>
+
           <div class="bg-white rounded-xl border border-silver-light p-8">
             <h3 class="text-lg font-bold text-navy mb-4">What to expect</h3>
             <ul class="space-y-3">

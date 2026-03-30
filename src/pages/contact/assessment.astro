@@ -157,6 +157,19 @@ const submitted = Astro.url.searchParams.get('submitted') === 'true';
           <p class="text-center text-slate text-xs">
             We respond within 24 hours. No automated follow-up sequences. Just a conversation.
           </p>
+
+          <div class="flex items-center gap-4 my-2">
+            <div class="flex-1 h-px bg-silver/20"></div>
+            <span class="text-slate text-xs font-medium uppercase tracking-wider">or</span>
+            <div class="flex-1 h-px bg-silver/20"></div>
+          </div>
+
+          <a href="https://cal.com/nexus-ai-consulting/30min" target="_blank" rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 w-full px-6 py-3 border border-teal/50 text-teal font-semibold rounded-lg hover:border-teal hover:bg-teal/10 transition-colors text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+            Prefer to book directly? Schedule a call
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          </a>
         </form>
       )}
     </div>
